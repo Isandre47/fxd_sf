@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <title><?php echo $meta_title; ?></title>
+    <meta name="description" content="<?php echo $meta_description; ?>">
+    <meta name="keywords" content="<?php echo $meta_kw; ?>">
+
+    <link rel="icon" type="image/png" href="<?php echo $rooturl; ?>favicon.png" />
+
+    <link href="<?php echo $ressurl; ?>css/design.css" type="text/css" rel="stylesheet" />
+    <link href="<?php echo $ressurl; ?>css/basic.css" type="text/css" rel="stylesheet" />
+    <link href="<?php echo $ressurl; ?>css/elements.css" type="text/css" rel="stylesheet" />
+    <link href="<?php echo $ressurl; ?>css/jquery.modal.min.css" type="text/css" rel="stylesheet" />
+
+    <?php if($nav == "plateform") { ?> <link rel="stylesheet" type="text/css" href="<?php echo $ressurl; ?>css/print.css" media="print" /> <?php } ?>
+
+
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.1/themes/base/jquery-ui.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+
+    <link href="<?php echo $ressurl; ?>css/mobile.css" type="text/css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="<?php echo $ressurl ?>js/jquery.js"></script>
+    <script src="<?php echo $ressurl ?>js/jquery.modal.min.js"></script>
+
+
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+
+
+    <script type="text/javascript" src="<?php echo $ressurl ?>js/jquery.reveal.js"></script>
+
+    <script src="<?php echo $ressurl ?>js/rater.min.js" charset="utf-8"></script>
+
+
+    <?php if($nav == "admin") { ?>
+    <meta name="robots" content="noindex">
+    <?php } ?>
+
+    <?php if($nav=="error") {
+            header("HTTP/1.0 404 Not Found");
+
+          } ?>
+
+
+
+    <script>
+
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '188667104822603',
+          xfbml      : true,
+          version    : 'v2.5'
+        });
+      };
+
+      (function(d, s, id){
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/fr_FR/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+
+    <meta property="og:image" content="<?php echo $ressurl; ?>img/vignette.png" />
+
+</head>
+
+<body>
+
+
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/fr_FR/all.js#xfbml=1&appId=416129865153264";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+
+<?php
+    if (isConnectedAdmin()) {
+        require_once($resspath . "pages/generic/header-admin.php");
+    } else if ($nav == "plateform") {
+        require_once($resspath . "pages/generic/header-plateform.php");
+    } else if ($nav == "buy") {
+        require_once($resspath . "pages/generic/header-buy.php");
+    } else {
+        require_once($resspath . "pages/generic/header.php");
+    }
