@@ -1,81 +1,107 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <title><?php echo $meta_title; ?></title>
-    <meta name="description" content="<?php echo $meta_description; ?>">
-    <meta name="keywords" content="<?php echo $meta_kw; ?>">
-
-    <link rel="icon" type="image/png" href="<?php echo $rooturl; ?>favicon.png" />
-
-    <link href="<?php echo $ressurl; ?>css/design.css" type="text/css" rel="stylesheet" />
-    <link href="<?php echo $ressurl; ?>css/basic.css" type="text/css" rel="stylesheet" />
-    <link href="<?php echo $ressurl; ?>css/elements.css" type="text/css" rel="stylesheet" />
-    <link href="<?php echo $ressurl; ?>css/jquery.modal.min.css" type="text/css" rel="stylesheet" />
-
-    <?php if($nav == "plateform") { ?> <link rel="stylesheet" type="text/css" href="<?php echo $ressurl; ?>css/print.css" media="print" /> <?php } ?>
-
-
-    <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.1/themes/base/jquery-ui.css" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-
-
-    <link href="<?php echo $ressurl; ?>css/mobile.css" type="text/css" rel="stylesheet" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <script src="<?php echo $ressurl ?>js/jquery.js"></script>
-    <script src="<?php echo $ressurl ?>js/jquery.modal.min.js"></script>
-
-
-
-    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
-
-
-    <script type="text/javascript" src="<?php echo $ressurl ?>js/jquery.reveal.js"></script>
-
-    <script src="<?php echo $ressurl ?>js/rater.min.js" charset="utf-8"></script>
-
-
-    <?php if($nav == "admin") { ?>
-    <meta name="robots" content="noindex">
-    <?php } ?>
-
-    <?php if($nav=="error") {
-            header("HTTP/1.0 404 Not Found");
-
-          } ?>
-
-
-
-    <script>
-
-      window.fbAsyncInit = function() {
-        FB.init({
-          appId      : '188667104822603',
-          xfbml      : true,
-          version    : 'v2.5'
-        });
-      };
-
-      (function(d, s, id){
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) {return;}
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/fr_FR/sdk.js";
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
-    </script>
-
-
-    <meta property="og:image" content="<?php echo $ressurl; ?>img/vignette.png" />
-
+    {% include ('top.html.twig') %}
 </head>
 
 <body>
 <h1>{{ page_title }}</h1>
-
     Hello {{ user }}!
+{{ include('home.html.twig') }}
+{{ include('rate.html.twig') }}
+<div id="container-main" class="" >
+    <div class="centralizer">
+        <div class="main">
+            <br /><br />
+            <div class="fulldiv">
+                <div class="square2">
+                    <a href="<?php echo $urlAbout[$idLang] ?>">
+                        <img src="{{ asset('img/ico-mobile.png') }}" alt="Fox Driver est mobile" /><br />
+                        Mobilité
+                    </a>
+                </div>
+                <div class="square1">
+                    <a href="<?php echo $urlAbout[$idLang] ?>">
+                        <img src="{{ asset('img/ico-bulletin-paye.png') }}" alt="Fox Driver vous aide à controler votre fiche de paye" /><br />
+                        Contrôle
+                    </a>
+                </div>
+                <div class="square2">
+                    <a href="<?php echo $urlAbout[$idLang] ?>">
+                        <img src="{{ asset('img/ico-save.png') }}" alt="Fox Driver est sécurisant" /><br />
+                        Sauvegarde
+                    </a>
+                </div>
+                <div class="square1">
+                    <a href="<?php echo $urlAbout[$idLang] ?>">
+                        <img src="{{ asset('img/ico-lecteur.png') }}" alt="Fox Driver est simple" /><br />
+                        Simplicité
+                    </a>
+                </div>
+                <div class="square2">
+                    <a href="<?php echo $urlAbout[$idLang] ?>">
+                        <img src="{{ asset('img/ico-indetectable.png') }}" alt="Fox Driver ne laisse aucune trace" /><br />
+                        Discrétion
+                    </a>
+                </div>
+                <div class='fulldiv'><br /><br /></div>
+            </div>
+            <div class="fulldiv">
+                <?php
+           /*
+            function facebook_count($url){
 
-{# ... #}
+                // Query in FQL
+                $fql  = "SELECT share_count, like_count, comment_count ";
+                $fql .= " FROM link_stat WHERE url = '$url'";
+
+                $fqlURL = "https://api.facebook.com/method/fql.query?format=json&query=" . urlencode($fql);
+
+                // Facebook Response is in JSON
+                $response = file_get_contents($fqlURL);
+                return json_decode($response);
+
+            }
+
+            $fb = facebook_count('https://www.facebook.com/Les-Routiers-rus%C3%A9s-FoxDriver-391297777715176/');
+
+            // facebook share count
+            echo $fb[0]->share_count;
+
+                // facebook like count
+                echo $fb[0]->like_count;
+
+                // facebook comment count
+                echo $fb[0]->comment_count;
+                */
+                ?>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% include 'footer.html.twig' %}
+
+
+
+<!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js#xfbml=1&version=v2.12&autoLogAppEvents=1';
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+
+<!-- Your customer chat code -->
+<div class="fb-customerchat"
+     attribution="setup_tool"
+     page_id="391297777715176"
+     theme_color="#0084ff"
+     logged_in_greeting="Bonjour, en quoi pouvons-nous vous aider ?"
+     logged_out_greeting="Bonjour, en quoi pouvons-nous vous aider ?">
+</div>
+
 </body>
 </html>

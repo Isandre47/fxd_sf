@@ -1,0 +1,25 @@
+<footer id="container-footer">
+    <div class="centralizer">
+        <div style="float:left;width:100%" id="footer">
+
+            <p class="tac show_mobile">
+                <a href="<?php echo $urlHelp[$idLang] ?>" class="link2"><img src="{{ asset('img/ico-contact.png') }}" alt="Assistance FoxDriver" title="Besoin d'aide ?"/> Assistance</a>
+                <a href="<?php echo $urlAccount[$idLang] ?>"  class="link2" ><img src="{{ asset('img/ico-account.png') }}" alt="Mon compte FoxDriver" title="Connectez-vous" /> Mon compte</a>
+                <?php if(isConnected()) { ?> <a href='<?php echo $urlLogout[$idLang] ?>'>  <img src="{{ asset('img/ico-logout.png') }}" alt="x" title="Se déconnecter de mon compte" /></a><?php } ?>
+                <a href="<?php echo $urlFacebook ?>"  target="_blank" class="link2" ><img src="{{ asset('img/ico-facebook.png') }}" alt="Facebook FoxDriver" title="Rejoins la communauté futée" /> Rejoignez-nous !</a>
+
+            </p>
+            <br />
+            <p class="tac">
+                <img src="{{ asset('img/paiement-securise.png') }}" style="" alt="Fox DriverLecteur de carte conducteur" /><br /><br />
+                <img src="{{ asset('img/illu-frenchtech.png') }}" style="width:150px" alt="Fox Driver French Tech" />
+            </p>
+            <p style="font-size:0.8em;text-align:center">
+                &copy; <?php if(date("Y") == "2016") echo "2016"; else echo "2016 - ".date("Y") ?> Fox Driver - <a href='<?php echo $urlLegal[$idLang] ?>'>Mentions</a> - <a href='<?php echo $urlRulesConfidentialPolicies[$idLang] ?>'>Règles de confidentialités de l'application</a> - <a href="<?php echo $rooturl ?>">Lecteur de carte conducteur sur smartphone et tablette  </a>
+            </p>
+
+            <?php if (date("Y/m/d") <= "2018/12/25") { ?> <p class="fs08 tac">(1) Offre valable pour tout achat effectué jusqu'au 25/12/2018 inclu</p> <?php } ?>
+
+        </div>
+    </div>
+</footer>

@@ -1,0 +1,46 @@
+
+<script src="{{ asset('js/pdf/pdfmake.min.js') }}"></script>
+<script src="{{ asset('js/pdf/vfs_fonts.js') }}"></script>
+<script src="{{ asset('js/pdf/exemple.js') }}"></script>
+<header>
+    <div class="container-header">
+        <div class="centralizer">
+            <div id="container-logo">
+                <div id="logo">
+
+                    <div class="fl hide_mobile">
+                        <a href="<?php echo $rooturl; ?>" ><img src="{{ asset('img/logo-foxdrive-lecture-carte-conducteur.png') }}" alt="<?php echo $meta_title; ?>" title="<?php echo $meta_title; ?>" class='fl' /></a>
+                    </div>
+                    <div class="fl ml5 mt05 hide_mobile">
+
+
+
+
+                    </div>
+                    <div class="fr hide_mobile">
+                        <p class="fs08 tar">
+
+                            <?php /* <div  class="fb-like"   data-share="true" data-width="450" data-show-faces="true"></div>*/ ?>
+                    <br />
+
+                    <nav style="text-align: center">
+                        <ul id="menu">
+                            <li class="hide_mobile"><a href="<?php echo $rooturl ?>" ><img src="{{ asset('img/ico-home.png') }}" alt="Accueil FoxDriver" style="height:20px; vertical-align:top" /></a></li>
+                            <li><a href="<?php echo $urlAdminAccounts ?>" >Clients</a></li>
+                            <li><a href="<?php echo $urlAdminOrders ?>" >Commandes</a>
+                                <?php if(isConnectedAdmin()) { ?> <a href='<?php echo $urlLogout[$idLang] ?>'>  <img src="<?php echo $ressurl ?>img/ico-logout.png" alt="x" title="Se déconnecter de mon compte" /></a><?php } ?>
+                            </li>
+
+                        </ul>
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+</header>
+

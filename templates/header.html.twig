@@ -1,0 +1,69 @@
+<script src="{{ asset('js/pdf/pdfmake.min.js') }}"></script>
+<script src="{{ asset('js/pdf/vfs_fonts.js') }}"></script>
+<script src="{{ asset('js/pdf/exemple.js') }}"></script>
+<header>
+    <div class="container-header">
+
+        <div id="container-logo">
+            <div id="logo" class="pl20">
+
+                <div class="fl hide_mobile">
+                    <a href="<?php echo $rooturl; ?>" ><img src="{{ asset('img/logo-foxdrive-lecture-carte-conducteur.png') }}" alt="<?php echo $meta_title; ?>" title="<?php echo $meta_title; ?>" class='fl' /></a>
+                </div>
+                <div class="fl ml5 mt05 hide_mobile">
+
+                    <p class='mb0 fs18 lh1 ml5'>
+                        <a href="<?php echo $rooturl; ?>" class="link2">
+                            <span class="mb0">Fox DRIVER</span><br />
+                            <span style="" class="first fs05">Les conducteurs rusés !</span>
+                        </a>
+                    </p>
+
+                    <h1 class="fs06 ml5 second">
+                        <img src="{{ asset('img/ico-smarpthone-tablette.png') }}" alt="Smarphone ou tablette" title="" class="fl mr5" /> Lecture de carte conducteur et contrôle des heures<br />Disponible sur Smartphone et Tablette Android
+                    </h1>
+
+                </div>
+                <p class="tac show_mobile">
+                    <a href="<?php echo $rooturl; ?>" ><img src="{{ asset('img/logo-foxdrive-lecture-carte-conducteur.png') }}" alt="<?php echo $meta_title; ?>" title="<?php echo $meta_title; ?>"/></a>
+                </p>
+                <p onClick="$('#menu').slideToggle('fast','swing')" class="tac show_mobile mb0_m">
+                    <img src="{{ asset('img/ico-menu.png') }}g" alt=" - " /> Menu
+                </p>
+                <div class="fr fr_m pr20 ">
+                    <p class="fs06 tar hide_mobile">
+                        <img src="{{ asset('img/ico-france.png') }}" alt="Application lecture carte conducteur Française Fox Driver" title="Fox Driver France"/> Application conçue en France&nbsp;
+                        <a href="<?php echo $urlHelp[$idLang] ?>" class="link2"><img src="{{ asset('img/ico-contact.png') }}" alt="Assistance FoxDriver" title="Besoin d'aide ?"/> Assistance</a>
+                        <a href="<?php echo $urlAccount[$idLang] ?>"  class="link2" ><img src="{{ asset('img/ico-account.png') }}" alt="Mon compte FoxDriver" title="Connectez-vous" /> Mon compte</a>
+
+                        <?php if(isConnected()) { ?> <a href='<?php echo $urlLogout[$idLang] ?>'>  <img src="{{ asset('img/ico-logout.png') }}" alt="x" title="Se déconnecter de mon compte" /></a> <?php } ?>
+                        <a href="<?php echo   $urlGodfather[$idLang] ?>" class="link2"><img src="{{ asset('img/ico-gift.png') }}" alt="Parrainage FoxDriver" title="Besoin d'aide ?"/> Parrainage</a>
+                        <a href="<?php echo $urlFacebook ?>"  target="_blank" class="link2" ><img src="{{ asset('img/ico-facebook.png') }}" alt="Facebook FoxDriver" title="Rejoins la communauté futée" /> Rejoignez-nous !</a>
+
+                    </p>
+                    <?php /* <div  class="fb-like"   data-share="true" data-width="450" data-show-faces="true"></div>*/ ?>
+                <br />
+
+                <nav style="text-align: center">
+                    <ul id="menu">
+                        <li class="hide_mobile"><a href="<?php echo $rooturl ?>" ><img src="{{ asset('img/ico-home.png') }}" alt="Accueil FoxDriver" style="height:20px; vertical-align:top" /></a></li>
+                        <li><a href="<?php echo $urlAbout[$idLang] ?>" class="underline">Comment ça marche ?</a></li>
+                        <li><a href="<?php echo $urlApp[$idLang] ?>" class="underline" >Application</a></li>
+                        <?php /* <li><a href="<?php echo $urlReader[$idLang] ?>"  class="underline">Lecteur</a></li> */ ?>
+                        <li><a href="<?php echo $urlPlatforme[$idLang] ?>"  class="underline">Plateforme</a></li>
+                        <li><a href="<?php echo $urlFrais[$idLang] ?>" class="underline" >Frais</a></li>
+                        <li><a href="<?php echo $urlBuy[$idLang] ?>" class="button mb0 mt0 <?php if($nav == "home") echo "bordering" ?>" >Acheter</a></li>
+
+                    </ul>
+                </nav>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    </div>
+
+
+</header>
