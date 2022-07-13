@@ -48,8 +48,8 @@
 
                 <nav style="text-align: center">
                     <ul id="menu">
-                        <li class="hide_mobile"><a href="<?php echo $rooturl ?>" ><img src="{{ asset('img/ico-home.png') }}" alt="Accueil FoxDriver" style="height:20px; vertical-align:top" /></a></li>
-                        <li><a href="<?php echo $urlAbout[$idLang] ?>" class="underline">Comment ça marche ?</a></li>
+                        <li class="hide_mobile"><a href="{{ path('home') }}" ><img src="{{ asset('img/ico-home.png') }}" alt="Accueil FoxDriver" style="height:20px; vertical-align:top" /></a></li>
+                        <li><a href="{{ path('about') }}" class="underline">Comment ça marche ?</a></li>
                         <li><a href="<?php echo $urlApp[$idLang] ?>" class="underline" >Application</a></li>
 {#                        <?php /* #}
 {#                        <li><a href="<?php echo $urlReader[$idLang] ?>"  class="underline">Lecteur</a></li>#}

@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block center %}
+    <div id="container-main" class="bgroad">
+        {#    <?php /* if(!$isLowDef) {?>#}
+        {#    <video autoplay loop poster="" id="bgvid">#}
+        {#        <source src="{{ asset('video/driving.webm') }}" type="video/webm">#}
+        {#        <source src="{{ asset('video/driving.mp4') }}" type="video/mp4">#}
+        {#    </video>#}
+        {#    <?php } */ ?>#}
+        <div class="centralizer">
+            <div class="main" style=''>
+                <div class="fulldiv" style="">
+                    <p class="tac">
+                        <a href="#myModal" rel="modal:open"><img src="{{ asset('img/foxdriver-lecteur-carte-conducteur.png') }}" alt="Fox Driver lecteur de carte conducteur " title="Lecteur de carte conducteur " /></a>
+                    </p>
+                    <!-- Permet d'activer la recommandation Facebook. -->
+                    <!-- <div class="fb-like ml30p" data-href="http://www.fox-driver.com"  data-layout="standard" data-action="recommend" data-show-faces="true"  style="display:block; overflow:hidden"></div> -->
+                    <br /><br />
+                    <h2 class="tac">
+                        Tous vos temps de conduite et vos frais de déplacement<br />sur votre	Smartphone et votre Tablette Android !
+                    </h2>
+
+
+                    <p class="tac">
+                        Découvrez FoxDriver, le <strong>lecteur de carte conducteur</strong> vous permettant de <strong>vérifier vos temps de conduite et de gérer vos frais</strong> à tout moment via une <strong>application smartphone et tablette</strong> spécialement créée pour les <strong>conducteurs routiers</strong>.
+                    </p>
+                    <p  class="tac">
+                        <a href="<?php echo $urlAbout[$idLang] ?>" class="button bigger">Vérifier mes temps de conduite &rarr;</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

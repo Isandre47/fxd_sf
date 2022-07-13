@@ -1,0 +1,204 @@
+{% extends 'base.html.twig' %}
+
+{% block center %}
+{#    <?php @session_start(); ?>#}
+{#    <?php $nav="static"; $idLang=1 ; ?>#}
+{#    <?php #}
+{#	$meta_title="Fox Driver / Comment marche l'application et le lecteur de carte ";#}
+{#	$meta_description="Fox Driver vous permet de télécharger et de lire les informations issues de votre carte conducteur sur votre smartphone ou tablette Android et ainsi de contrôler  vos temps de conduite.";#}
+{#        #}
+{#	require_once("../../controller/init.php");#}
+{#        #}
+{#?>#}
+{#    <?php require_once("../generic/top.php"); ?>#}
+{#    <?php require_once("../static/promo-freeship.php"); ?>#}
+
+
+    <div id="container-main">
+        <div class="centralizer">
+            <div class="main">
+
+                <p class="breadcrumb"><a href="{{ path('home')}}">Accueil</a> > Comment ça marche ?</p>
+
+                <h1>Comment ça marche ?</h1>
+                <br />
+                <p class="tac fwb">
+{#                    <?php /* #}
+{#                    <img src="{{ asset('img/foxdriver-lecteur-carte-conducteur.png') }}" alt="Fox Driver : Comment marche le lecteur de carte conducteur Fox Diver ?" title="Comment marche le lecteur de carte conducteur Fox Diver ?" /><br /><br />#}
+{#                    */ ?>#}
+                    Fox Driver vous permet de lire les informations de votre carte conducteur sur votre smartphone ou tablette Android<br />et ainsi de contrôler  vos temps de conduite.
+                    <br />Nouveau, Fox Driver vous permet aussi de gérer vos frais de déplacement !
+                </p><br />
+                <iframe width="560" height="315" class="ml20p" src="https://www.youtube.com/embed/tWYmSydEsyw?showinfo=0" frameborder="0" allowfullscreen></iframe>
+
+                <br /><br />
+                <p class='warning tac'><img src="{{ asset('img/ico-mask.png') }}" alt="Fox Driver : téléchargement de la carte conducteur ne laisse aucune trace. "> Avec Fox Driver soyez serein ! Aucune donnée de la carte ne sera effacée.</p>
+                <br />
+            </div>
+        </div>
+    </div>
+    <div id="container-main" class="bg-second">
+        <div class="centralizer">
+            <div class="main p80px">
+                <div class="fl w30">
+                    <p class="tac"><img src="{{ asset('img/ico-mobile.png') }}" alt="Fox Driver : Lecteur de carte conducteur mobile" /></p>
+                </div>
+                <div class="fl w70">
+                    <br />
+                    <h2>Récupérer vos temps d'activité à tout moment</h2>
+                    <p>
+                        Mobile, FoxDriver vous permet de visualiser vos temps de chez vous ou depuis votre camion.
+                        <br />
+                        Temps de Travail Effectifs (Conduite et Travail), Coupures (Disponibilité, Pause), Heures supplémentaires (25% et  50%) et Heures de nuits.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="container-main">
+        <div class="centralizer">
+            <div class="main p80px">
+                <div class="fl w30">
+                    <p class="tac"><img src="{{ asset('img/ico-bulletin-paye.png') }}" alt="Fox Driver : Bulletin de paye" /></p>
+                </div>
+                <div class="fl w70">
+                    <br />
+                    <h2>Contrôler votre bulletin de paie</h2>
+                    <p>
+                        Simple et rapide, grâce à Fox Driver vous comparez votre bulletin de paie avec les informations extraites de votre carte conducteur.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="container-main" class="bg-second">
+        <div class="centralizer">
+            <div class="main p80px">
+                <div class="fl w30">
+                    <p class="tac"><img src="{{ asset('img/ico-save.png') }}" alt="Fox Driver : Sauvegarde des données conducteur" /></p>
+                </div>
+                <div class="fl w70">
+                    <br />
+                    <h2>Vos données sauvegardées et en sécurité</h2>
+                    <p>
+                        Offerte les 6 premiers mois, la sauvegarde vous permet de conserver vos heures d'activités sans limite de temps.
+                        <br />
+                        <span class="fs08"><img src="{{ asset('img/ico-info.png') }}" alt="i:" title="Fox Driver : Information relative aux données de la carte conducteur" /> Sans solution comme Fox Driver, passé le délai moyen de 1 an <sup>(1)</sup> ou en cas de renouvellement de la carte conducteur, les informations ne sont plus récupérables. </span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="container-main" >
+        <div class="centralizer">
+            <div class="main p80px">
+                <div class="fl w30">
+                    <p class="tac"><img src="{{ asset('img/ico-windows-mac.png') }}" alt="Fox Driver : Accès aux données sur Windows et MAC" /></p>
+                </div>
+                <div class="fl w70">
+                    <br />
+                    <h2>Accès aux données sur Windows et MAC</h2>
+                    <p>
+                        Avec Fox Driver, il vous est possible de consulter vos temps d'activités, sauvegardés via l'application, sur une plateforme internet accessible depuis n'importe quel ordinateur (Windows, MAC, Linux...) pour pouvoir par exemple les imprimer.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="container-main" class="bg-second">
+        <div class="centralizer">
+            <div class="main p80px">
+                <div class="fl w30">
+                    <p class="tac"><img src="{{ asset('img/ico-infraction.png') }}" alt="Fox Driver : Visualisation des infractions" /></p>
+                </div>
+                <div class="fl w70">
+                    <br />
+                    <h2>Visualisation des infractions</h2>
+                    <p>
+                        Avec Fox Driver, vous pouvez visualiser vos infractions sur le dépassement des limites de temps de conduite et de travail quotidien, hebdomadaire et bi-hebdomadaire.
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="container-main" >
+        <div class="centralizer">
+            <div class="main p80px">
+                <div class="fl w30">
+                    <p class="tac"><img src="{{ asset('img/ico-send-data.png') }}" alt="Fox Driver : Envoi manuel des données conducteur à votre employeur" /></p>
+                </div>
+                <div class="fl w70">
+                    <br />
+                    <h2>Envoi manuel des données conducteur</h2>
+                    <p>
+                        Avec Fox Driver, il vous est possible d'envoyer volontairement vos données conducteur à votre employeur ou à tout autre personne depuis n'importe quel lieu connecté à Internet.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="container-main" class="bg-second">
+        <div class="centralizer">
+            <div class="main p80px">
+                <div class="fl w30">
+                    <p class="tac"><img src="{{ asset('img/ico-frais.png') }}" alt="Fox Driver : Frais de déplacements" /></p>
+                </div>
+                <div class="fl w70">
+                    <br />
+                    <h2>Frais de déplacement</h2>
+                    <p>
+                        Avec Fox Driver, vous pouvez gérer au quotidien vos frais de déplacement réglementés (Repas, repas de nuit, étranger etc...) mais aussi des frais divers comme l'essence ou les péages.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="container-main" >
+        <div class="centralizer">
+            <div class="main ">
+
+
+                <h2 class="subtitle fancy"><span>Comment profiter de Fox Driver ?</span></h2>
+                <p class="tac"><img src="{{ asset('img/ico-lecteur.png') }}" alt="Fox Driver : Lecteur de carte conducteur et smartphone" /></p>
+                <p>
+                    Fox Driver fonctionne avec son lecteur de carte conducteur mobile que l'on connecte à son smartphone ou sa tablette Android. Il suffit ensuite de télécharger l'<a href="<?php echo $urlApp[$idLang] ?>" class="">application Fox Driver</a> pour lire les données de la carte et afficher les différents temps d'activités.
+                </p>
+                <br />
+                <p class="tac">
+                    <a href="<?php echo $urlBuy[$idLang] ?>" class="button bigger">Acheter Fox Driver &rarr; </a>
+                </p>
+                <br/>
+{#                <?php /* <p>#}
+{#                <strong>Le lecteur FoxDriver est au prix unique de <span class="first">49€<sup>90</sup></span> sans abonnement.</strong><br />#}
+{#                Ce dernier est compatible avec tous les appareils Androïd munis d'un port micro-USB <a href="#" class="bubble" ><img src="{{ asset('img/ico-what.png') }}" alt="?" title="Aide" /></a>#}
+{#                </p>#}
+{#                <h3>2. Installer l'application gratuite FoxDriver</h3>#}
+{#                <p>#}
+{#                    Disponible sur le Play Store, l'application FoxDriver est totalement gratuite. Une fois télécharger et votre lecteur FoxDriver <sup>(2)</sup> brancher vous pourrez lire et afficher vos heures d'activités. Vous bénéficierez en plus d'une sauvegarde gratuite d'un an.#}
+{#                </p>#}
+{#                <p class="tac">#}
+{#                    <a href=""><img src="<?php echo $ressurl ?>img/but-googleplay.png" alt="Disponible sur le Google Play" title="Télécharger l'application FoxDriver" /></a>#}
+{#                </p> */ ?>#}
+            </div>
+        </div>
+    </div>
+    <?php require($resspath."pages/static/rate.php" ) ?>
+    <div id="container-main" class="">
+        <div class="centralizer">
+            <div class="main p80px">
+                <h2>Besoin d'une assistance ?</h2>
+                <p>Vous pouvez consulter notre rubrique assistance avec de multiples aides et la possibilité de contacter l'équipe Fox Driver gratuitement.</p><p><a href="<?php echo $urlHelp[$idLang] ?>" class="link1">Consulter l'assistance Fox Driver &rarr;</a></p>
+                <br />
+                <p class="fs06">
+                    (1) Durée moyenne généralement constatée due à la limite de stockage de la carte conducteur
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+
+{#    <?php require_once("../generic/bottom.php"); ?>#}
+{% endblock %}
