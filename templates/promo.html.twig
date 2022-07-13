@@ -1,0 +1,53 @@
+{#<?php#}
+{#//Detect special conditions devices#}
+{#$iPod = stripos($_SERVER['HTTP_USER_AGENT'], "iPod");#}
+{#$iPhone = stripos($_SERVER['HTTP_USER_AGENT'], "iPhone");#}
+{#$iPad = stripos($_SERVER['HTTP_USER_AGENT'], "iPad");#}
+{#$Android = stripos($_SERVER['HTTP_USER_AGENT'], "Android");#}
+{#$webOS = stripos($_SERVER['HTTP_USER_AGENT'], "webOS");#}
+
+{#//do something with this information#}
+{#if ($iPod || $iPhone) {#}
+{#    //browser reported as an iPhone/iPod touch -- do something here#}
+{#} else if ($iPad) {#}
+{#    //browser reported as an iPad -- do something here#}
+{#} else if ($Android) {#}
+{#    //browser reported as an Android device -- do something here#}
+{#} else if ($webOS) {#}
+{#    //browser reported as a webOS device -- do something here#}
+{#}#}
+{#?>#}
+
+
+<div id="container-main" class="bgn bg-second"  style="background: #262630 !important" >
+    <div class="centralizer">
+        <div class="main" style=''>
+{#            <?php#}
+{#            if ($iPod || $iPhone) {#}
+{#                ?>#}
+
+
+
+{#            <p class="mb0 tac fs08"><img src='{{ asset('img/ico-apple.png')}}' alt='' /> <strong>Vous avez un iPhone ou iPad ? </strong> <a href="<?php echo $urlApple[$idLang] ?>" class="link3">&rarr; Inscrivez-vous au lancement !</a></p>#}
+
+{#            <?php#}
+{#            } else if (date("Y/m/d") <= "2018/11/25") {#}
+{#                ?>#}
+
+
+{#            <p class="mb0 tac fs08"><img src='{{ asset('img/ico-positive.png') }}' alt='Fox Driver' /> Black Friday Week : Livraison <span class="underline">Gratuite</span> jusqu'au 25 novembre à minuit !</p>#}
+
+{#            <?php#}
+{#            }} else if (date("Y/m/d") < "2018/08/05") {#}
+{#                ?> <p class="mb0 tac fs08">Aucune expédition du 10 au 22 Août. Merci pour votre compréhension :)</p><?php#}
+{#            } else if (date("Y/m/d") <= "2018/12/25") {#}
+{#                ?>  <p class="mb0 tac fs08"><img src='<?php echo $ressurl ?>img/ico-xmas.png' alt='' />14 jours pour essayer après Noël, <span class="underline">satisfait ou remboursé</span> ! <sup>(1)</sup></p>#}
+{#            <?php#}
+{#            } else {#}
+{#                ?>#}
+            <p class="mb0 tac fs08"><img src='{{ asset('img/ico-positive.png') }}' alt='' />14 jours pour essayer , <span class="underline">satisfait ou remboursé</span> !</p>
+
+{#            <?php } ?>#}
+        </div>
+    </div>
+</div>

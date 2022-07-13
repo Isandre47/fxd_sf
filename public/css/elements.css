@@ -49,10 +49,10 @@ a:hover
 header h1
 {
 	font-size:1em;
-	
-	-moz-text-shadow: none; 
-  	-webkit-text-shadow: none;  
- 	text-shadow: none;  
+
+	-moz-text-shadow: none;
+  	-webkit-text-shadow: none;
+ 	text-shadow: none;
 }
 
 #menu,
@@ -60,8 +60,8 @@ header h1
     list-style: none;
     margin-left:0;
     padding-left:0;
-	
-   
+
+
 }
 #menu {
     float: left;
@@ -74,7 +74,7 @@ header h1
     float: left;
 	list-style-image :none;
 	margin:0;
-  
+
 }
 
 #menu ul {
@@ -105,16 +105,16 @@ header h1
 #menu a:hover
 {
 
- 	
+
 	color:#40cc38;
- 	
+
 }
 
 #menu li ul li a
 {
-	-moz-box-shadow: 0px 1px 3px #000000; 
-  	-webkit-box-shadow: 0px 1px 3px #000000;  
- 	box-shadow: 0px 1px 3px #000000;  
+	-moz-box-shadow: 0px 1px 3px #000000;
+  	-webkit-box-shadow: 0px 1px 3px #000000;
+ 	box-shadow: 0px 1px 3px #000000;
  	font-size:0.8em;
 }
 
@@ -160,7 +160,7 @@ header h1
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 	border-radius: 3px;
-       
+
 }
 
 .bigger
@@ -169,7 +169,7 @@ header h1
     margin-top: 16px;
        margin-bottom: 16px;
         display: inline-block;
-       
+
 }
 
 .button:hover
@@ -204,14 +204,14 @@ header h1
 }
 
 
-.buttonFacebook 
+.buttonFacebook
 {
 	background: #3a5b9d;
 	color:white;
 	font-size:1em;
 	border:none;
 	padding:5px;
-	
+
 	text-decoration:none;
 	transition: background 0.3s ease-in-out;
     -moz-transition: background 0.3s ease-in-out;
@@ -243,9 +243,9 @@ header h1
 	transition: background 0.3s ease-in-out;
    -moz-transition: background 0.3s ease-in-out;
    -webkit-transition: background 0.3s ease-in-out;
-   -moz-text-shadow: 0px 1px 2px #000000; 
-  	-webkit-text-shadow: 0px 1px 2px #000000;  
- 	text-shadow: 0px 1px 2px #000000;  
+   -moz-text-shadow: 0px 1px 2px #000000;
+  	-webkit-text-shadow: 0px 1px 2px #000000;
+ 	text-shadow: 0px 1px 2px #000000;
 }
 
 .buttonUnactive:hover
@@ -264,7 +264,7 @@ header h1
 #footer a
 {
 	text-decoration:underline;
-	
+
 }
 
 #footer a:hover
@@ -295,7 +295,7 @@ textarea{width:100%}
 
 input, textarea,select
 {
-   
+
     padding:5px;
    -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
@@ -309,7 +309,7 @@ input, textarea,select
 select
 {
    cursor:pointer;
-   
+
 }
 
 .form label
@@ -338,7 +338,7 @@ table .label
 
  label
 {
-   
+
     color:#212121;
     cursor:pointer;
 }
@@ -428,8 +428,8 @@ table .label
 .bgn{background: none !important;}
 
 .shadow{
-    -moz-text-shadow: 0px 1px 3px #000000; 
-    -webkit-text-shadow: 0px 1px 3px #000000;  
+    -moz-text-shadow: 0px 1px 3px #000000;
+    -webkit-text-shadow: 0px 1px 3px #000000;
     text-shadow: 0px 1px 3px #000000;
 }
 
@@ -461,7 +461,7 @@ table .label
 
 .show_mobile
 {
-    display:none; 
+    display:none;
 }
 
 
@@ -534,7 +534,7 @@ table .label
 	border-top: 1px solid #ffffff;
 	border-bottom:1px solid #e0e0e0;
 	border-left: 1px solid #e0e0e0;
-	
+
 	background: #fafafa;
 	background: -webkit-gradient(linear, left top, left bottom, from(#fbfbfb), to(#fafafa));
 	background: -moz-linear-gradient(top,  #fbfbfb,  #fafafa);
@@ -560,7 +560,7 @@ table .label
 .table1 tr:hover td{
 	background: #f2f2f2;
 	background: -webkit-gradient(linear, left top, left bottom, from(#f2f2f2), to(#f0f0f0));
-	background: -moz-linear-gradient(top,  #f2f2f2,  #f0f0f0);	
+	background: -moz-linear-gradient(top,  #f2f2f2,  #f0f0f0);
 }
 
 .link2
@@ -620,13 +620,13 @@ table .label
 .bg-light
 {
 	background: #e6e6e6 !important;
-	
+
 }
 
 .tablebuy th, .tablebuy td
 {
 	padding:15px;
-        
+
 }
 
 .hoveringtable tr:hover td
@@ -646,18 +646,18 @@ table .label
 {
     padding:15px;
     border-collapse: collapse;
-       
+
 }
 
 .fancy {
   overflow: hidden;
   text-align: center;
 }
- 
+
 .fancy span {
   position: relative;
 }
- 
+
 .fancy span:before,
 .fancy span:after {
   content: "";
@@ -668,12 +668,12 @@ table .label
   top: 33%;
   margin-top: -4px;
 }
- 
+
 .fancy span:before {
   right: 100%;
   margin-right: 15px;
 }
- 
+
 .fancy span:after {
   left: 100%;
   margin-left: 15px;
@@ -690,13 +690,13 @@ table .label
 {
     float:left;
     width:50%;
-    
+
 }
 .screenshot  .right
 {
     float:left;
     width:45%;
-    
+
 }
 
 .screenshot .content
@@ -710,7 +710,7 @@ table .label
     float:left;
     width:185px;
     height:185px;
-   
+
     font-size:1.8em;
     transition: border-radius 0.4s ease-in-out;
     -moz-transition:  border-radius 0.4s ease-in-out;
@@ -719,7 +719,7 @@ table .label
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
-  
+
 }
 
 .square1 img, .square2 img
@@ -761,24 +761,24 @@ table .label
     color:#fff;
     background:#262630;
     border-bottom:5px solid #020203;
-	
+
 }
 
 .square1:hover, .square2:hover
 {
-  
+
     cursor:pointer;
     -webkit-border-radius: 60px;
     -moz-border-radius: 60px;
     border-radius: 60px;
-	
+
 }
 
-video#bgvid { 
+video#bgvid {
   position: absolute;
   top: 0%;
   left: 0%;
-  
+
   width: 100%;
   overflow: hidden;
   background: #fff;
@@ -794,7 +794,7 @@ video#bgvid {
     padding:2em;
 }
 
-.greysify 
+.greysify
 {
     filter: grayscale(100%);
     -webkit-filter: grayscale(100%);
@@ -854,7 +854,7 @@ video#bgvid {
 .bgroad
 {
     background: url('../img/bg.jpg') center center no-repeat !important;
-     -webkit-background-size: cover; 
+     -webkit-background-size: cover;
     background-size: cover;
 }
 

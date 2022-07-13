@@ -1,8 +1,7 @@
-
     <meta charset="utf-8" />
-    <title><?php echo $meta_title; ?></title>
-    <meta name="description" content="<?php echo $meta_description; ?>">
-    <meta name="keywords" content="<?php echo $meta_kw; ?>">
+    <title>{% block title %}{% endblock %}</title>
+    <meta name="description" content="{% block meta_desc %}{% endblock %}">
+    <meta name="keywords" content="{% block meta_keyword %}{% endblock %}">
 
     <link rel="icon" href="{{ asset('favicon.png') }}">
 
@@ -11,7 +10,7 @@
     <link rel="stylesheet" href="{{ asset('css/elements.css') }}" type="text/css">
     <link rel="stylesheet" href="{{ asset('css/jquery.modal.min.css') }}" type="text/css">
 
-    <?php if($nav == "plateform") { ?> <link rel="stylesheet" type="text/css" href="<?php echo $ressurl; ?>css/print.css" media="print" /> <?php } ?>
+{#    <?php if($nav == "plateform") { ?> <link rel="stylesheet" type="text/css" href="<?php echo $ressurl; ?>css/print.css" media="print" /> <?php } ?>#}
 
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.1/themes/base/jquery-ui.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
@@ -28,14 +27,14 @@
     <script src="{{ asset('js/jquery.reveal.js') }}" type="text/javascript"></script>
     <script src="{{ asset('js/rater.min.js') }}" type="text/javascript"></script>
 
-    <?php if($nav == "admin") { ?>
-    <meta name="robots" content="noindex">
-    <?php } ?>
+{#    <?php if($nav == "admin") { ?>#}
+{#    <meta name="robots" content="noindex">#}
+{#    <?php } ?>#}
 
-    <?php if($nav=="error") {
-            header("HTTP/1.0 404 Not Found");
+{#    <?php if($nav=="error") {#}
+{#            header("HTTP/1.0 404 Not Found");#}
 
-          } ?>
+{#          } ?>#}
 
 
 
@@ -61,7 +60,17 @@
 
     <meta property="og:image" content="{{ asset('img/vignette.png')}}" />
 
-    {% if 2 == 1 %}
+{#    if (isConnectedAdmin()) {#}
+{#    require_once($resspath . "pages/generic/header-admin.php");#}
+{#    } else if ($nav == "plateform") {#}
+{#    require_once($resspath . "pages/generic/header-plateform.php");#}
+{#    } else if ($nav == "buy") {#}
+{#    require_once($resspath . "pages/generic/header-buy.php");#}
+{#    } else {#}
+{#    require_once($resspath . "pages/generic/header.php");#}
+{#    }#}
+
+    {% if nav_type == 1 %}
         {% include 'header_admin.html.twig' %}
     {% elseif 2 == 3 %}
         {% include 'header_platform.html.twig' %}

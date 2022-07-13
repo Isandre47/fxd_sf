@@ -28,7 +28,7 @@
                     <a href="<?php echo $rooturl; ?>" ><img src="{{ asset('img/logo-foxdrive-lecture-carte-conducteur.png') }}" alt="<?php echo $meta_title; ?>" title="<?php echo $meta_title; ?>"/></a>
                 </p>
                 <p onClick="$('#menu').slideToggle('fast','swing')" class="tac show_mobile mb0_m">
-                    <img src="{{ asset('img/ico-menu.png') }}g" alt=" - " /> Menu
+                    <img src="{{ asset('img/ico-menu.png') }}" alt=" - " /> Menu
                 </p>
                 <div class="fr fr_m pr20 ">
                     <p class="fs06 tar hide_mobile">
@@ -36,12 +36,14 @@
                         <a href="<?php echo $urlHelp[$idLang] ?>" class="link2"><img src="{{ asset('img/ico-contact.png') }}" alt="Assistance FoxDriver" title="Besoin d'aide ?"/> Assistance</a>
                         <a href="<?php echo $urlAccount[$idLang] ?>"  class="link2" ><img src="{{ asset('img/ico-account.png') }}" alt="Mon compte FoxDriver" title="Connectez-vous" /> Mon compte</a>
 
-                        <?php if(isConnected()) { ?> <a href='<?php echo $urlLogout[$idLang] ?>'>  <img src="{{ asset('img/ico-logout.png') }}" alt="x" title="Se déconnecter de mon compte" /></a> <?php } ?>
+{#                        <?php if(isConnected()) { ?> #}
+{#                        <a href='<?php echo $urlLogout[$idLang] ?>'>  <img src="{{ asset('img/ico-logout.png') }}" alt="x" title="Se déconnecter de mon compte" /></a>#}
+{#                        <?php } ?>#}
                         <a href="<?php echo   $urlGodfather[$idLang] ?>" class="link2"><img src="{{ asset('img/ico-gift.png') }}" alt="Parrainage FoxDriver" title="Besoin d'aide ?"/> Parrainage</a>
                         <a href="<?php echo $urlFacebook ?>"  target="_blank" class="link2" ><img src="{{ asset('img/ico-facebook.png') }}" alt="Facebook FoxDriver" title="Rejoins la communauté futée" /> Rejoignez-nous !</a>
 
                     </p>
-                    <?php /* <div  class="fb-like"   data-share="true" data-width="450" data-show-faces="true"></div>*/ ?>
+{#                    <?php /* <div  class="fb-like"   data-share="true" data-width="450" data-show-faces="true"></div>*/ ?>#}
                 <br />
 
                 <nav style="text-align: center">
@@ -49,10 +51,16 @@
                         <li class="hide_mobile"><a href="<?php echo $rooturl ?>" ><img src="{{ asset('img/ico-home.png') }}" alt="Accueil FoxDriver" style="height:20px; vertical-align:top" /></a></li>
                         <li><a href="<?php echo $urlAbout[$idLang] ?>" class="underline">Comment ça marche ?</a></li>
                         <li><a href="<?php echo $urlApp[$idLang] ?>" class="underline" >Application</a></li>
-                        <?php /* <li><a href="<?php echo $urlReader[$idLang] ?>"  class="underline">Lecteur</a></li> */ ?>
+{#                        <?php /* #}
+{#                        <li><a href="<?php echo $urlReader[$idLang] ?>"  class="underline">Lecteur</a></li>#}
+{#                        */ ?>#}
                         <li><a href="<?php echo $urlPlatforme[$idLang] ?>"  class="underline">Plateforme</a></li>
                         <li><a href="<?php echo $urlFrais[$idLang] ?>" class="underline" >Frais</a></li>
-                        <li><a href="<?php echo $urlBuy[$idLang] ?>" class="button mb0 mt0 <?php if($nav == "home") echo "bordering" ?>" >Acheter</a></li>
+                        <li>
+                            <a href="<?php echo $urlBuy[$idLang] ?>" class="button mb0 mt0
+{#                            <?php if($nav == "home") echo "bordering" ?>#}
+                            " >Acheter</a>
+                        </li>
 
                     </ul>
                 </nav>
