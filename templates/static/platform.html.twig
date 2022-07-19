@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div id="main-header" style="background: url('<?php echo $rooturl ?>img/header-software.jpg') top center no-repeat"> </div>
+    <div id="container-main">
+        <div class="centralizer">
+            <div class="main">
+
+                <p class="breadcrumb"><a href="{{ path('home')}}">Accueil</a> > Plateforme internet Fox Driver</p>
+
+                <h1>Plateforme internet Fox Driver</h1>
+
+                <p class="warning">Pour utiliser la plateforme vous devez auparavant avoir acheté le lecteur Fox Driver et un accès à cette dernière. <a href="<?php echo $urlBuy[$idLang] ?>">&rarr; Obtenir Fox Driver</a></p><br />
+                <p class="tac"><img src="{{ asset('img/foxdriver-lecteur-carte-conducteur.png') }}" alt="Fox Driver : Consultez vos données condcuteur sur Windows et MAC" /></p>
+                <p>Grâce à la plateforme Internet Fox Driver vous consultez les données sauvegardées via l'<a href="{{ path('application') }}">application Fox Driver</a>, sur n'importe quel ordinateur de type Windows, MAC, ou Linux.</p>
+                <p class='tac'><a href='<?php echo $urlPlatformeHome[$idLang] ?>' class='button'>Accéder à la plateforme &rarr;</a></p>
+                <br /> <br />
+                <h2>Comment envoyez mes données vers la plateforme internet ?</h2>
+                <p>Pour transmettre vos données, vous devez utiliser l'option de sauvegarde des données disponible dans l'application Fox Driver.<br />Pour en savoir plus consultez notre rubrique d'aide : <a href="{{ path('application') }}#save">&rarr; Sauvegarde des données</a></p>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+

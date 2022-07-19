@@ -1,0 +1,126 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div id="container-main">
+        <div class="centralizer">
+            <div class="main">
+
+                <p class="breadcrumb"><a href="{{ path('home')}}">Accueil</a> > Parrainage</p>
+
+                <h1>Parrainez vos amis routiers et bénéficiez d'offres exceptionnelles</h1>
+
+                <p>
+                    Avec Fox Driver, <strong>parrainez vos amis  et gagnez 2 mois gratuits en plus sur votre abonnement</strong> à chaque nouveau filleul devenu client. De plus, votre filleul bénéficiera lui aussi  de ces 2 mois gratuits supplémentaires.<br />A partir de 10 filleuls nous vous envoyons un lecteur gratuitement, libre à vous d'en faire ce que vous voulez !
+                </p>
+                <p class="tac">
+                    <img src="{{ asset('img/foxdriver-parrainage.png') }}" alt="Fox Driver Parrainage" title="Parrainage" />
+                </p>
+                <p class='fs08'>Exemples :<br /> Pour 6 filleuls devenus clients, vous bénéficiez d'un an d'abonnement gratuit supplémentaire, soit 29,90 € offerts !<br />
+                    Pour 10 filleuls devenus clients, 1 lecteur de carte vous est offert !
+                </p>
+                <h2>Comment ça marche ?</h2>
+                <p><strong>C'est simple, communiquez à vos amis routiers l'adresse email de votre compte Fox Driver.</strong><br />Il n'auront alors plus qu'à la saisir au moment de valider leur commande.
+                <h2>Commencer dès maintenant !</h2>
+                <p>
+                    Connectez-vous à votre compte pour commencer votre parrainage : <a href="<?php echo $urlSignin[$idLang] ?>">&rarr; Connexion</a>
+                </p>
+{#                #}
+{#                <?php if(isConnected()) {#}
+{#            $godsons = getGodsonsByAuth($a->getAuth()) ;#}
+{#                $countgodsons =  count($godsons);#}
+{#                ?>#}
+{#                <h2>#}
+{#                    Vous avez <?php echo $countgodsons ?>  filleul(s)<?php#}
+{#                if($countgodsons > 0 && $countgodsons <= 6) echo ", excellent début :)" ;#}
+{#                    if($countgodsons > 6 ) echo ", ça commence à être sérieux :)" ;#}
+
+
+{#                    ?>#}
+{#                </h2>#}
+
+{#                <?php } ?>#}
+{#                <?php#}
+
+{#            $action = false;#}
+{#            $errors = array();#}
+
+{#            $email1G = true;#}
+{#            $email2G = true;#}
+{#            $email3G = true;#}
+{#            $email4G = true;#}
+
+{#            if(isset($_POST['validate']))#}
+{#             {#}
+{#                $email1 = sChamp($_POST['email1']);#}
+{#                $email2 = sChamp($_POST['email2']);#}
+{#                $email3 = sChamp($_POST['email3']);#}
+{#                $email4 = sChamp($_POST['email4']);#}
+
+{#                $email1G = testEmail($email1);#}
+{#                $email2G = (testEmail($email2) or $email2 == "");#}
+{#                $email3G = (testEmail($email3) or $email3 == "");#}
+{#                $email4G = (testEmail($email4) or $email4 == "");#}
+
+
+
+{#                if($email1G && $email2G && $email3G && $email4G )#}
+{#                {#}
+{#                    $sender = new Email();#}
+{#                    if($email1G) $sender->sendGodfather($a, $email1);#}
+{#                if($email2G) $sender->sendGodfather($a, $email2);#}
+{#                if($email3G) $sender->sendGodfather($a, $email3);#}
+{#                if($email4G) $sender->sendGodfather($a, $email4);#}
+{#                $action = true;#}
+
+{#                }#}
+{#                else#}
+{#                {#}
+{#                if(!$email1G)#}
+{#                {#}
+{#                $errors[] = "Email 1 non valide";#}
+{#                }#}
+{#                if(!$email2G)#}
+{#                {#}
+{#                $errors[] = "Email 2 non valide";#}
+{#                }#}
+{#                if(!$email3G)#}
+{#                {#}
+{#                $errors[] = "Email 3 non valide";#}
+{#                }#}
+{#                if(!$email4G)#}
+{#                {#}
+{#                $errors[] = "Email 4 non valide";#}
+{#                }#}
+
+{#                echo "<p class='error'>";#}
+
+{#                    foreach($errors as $error)#}
+{#                    {#}
+{#                    echo "- ".$error."<br />";#}
+{#                    }#}
+
+{#                    echo "</p><br />";#}
+
+{#                }#}
+{#                }#}
+
+
+{#                if($action)#}
+{#                {#}
+
+{#                echo "<p class='success'>Vos invitations ont été envoyées. Vous voilà bientôt parrain :)</p>";#}
+
+{#                }#}
+{#                else#}
+{#                {#}
+{#                require_once('form-godfather.php');#}
+{#                }#}
+
+
+{#                ?>#}
+
+            </div>
+        </div>
+    </div>
+{% endblock %}
+

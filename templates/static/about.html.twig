@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block center %}
+{% block body %}
 {#    <?php @session_start(); ?>#}
 {#    <?php $nav="static"; $idLang=1 ; ?>#}
 {#    <?php #}
@@ -13,7 +13,7 @@
 {#    <?php require_once("../generic/top.php"); ?>#}
 {#    <?php require_once("../static/promo-freeship.php"); ?>#}
 
-
+    {% include 'static/promo.html.twig' %}
     <div id="container-main">
         <div class="centralizer">
             <div class="main">
@@ -184,19 +184,23 @@
             </div>
         </div>
     </div>
-    <?php require($resspath."pages/static/rate.php" ) ?>
-    <div id="container-main" class="">
-        <div class="centralizer">
-            <div class="main p80px">
-                <h2>Besoin d'une assistance ?</h2>
-                <p>Vous pouvez consulter notre rubrique assistance avec de multiples aides et la possibilité de contacter l'équipe Fox Driver gratuitement.</p><p><a href="<?php echo $urlHelp[$idLang] ?>" class="link1">Consulter l'assistance Fox Driver &rarr;</a></p>
-                <br />
-                <p class="fs06">
-                    (1) Durée moyenne généralement constatée due à la limite de stockage de la carte conducteur
-                </p>
-            </div>
-        </div>
-    </div>
+{% include 'static/rate.html.twig' %}
+{% include 'static/asset.html.twig' %}
+
+
+    {#    <?php require($resspath."pages/static/rate.php" ) ?>#}
+{#    <div id="container-main" class="">#}
+{#        <div class="centralizer">#}
+{#            <div class="main p80px">#}
+{#                <h2>Besoin d'une assistance ?</h2>#}
+{#                <p>Vous pouvez consulter notre rubrique assistance avec de multiples aides et la possibilité de contacter l'équipe Fox Driver gratuitement.</p><p><a href="<?php echo $urlHelp[$idLang] ?>" class="link1">Consulter l'assistance Fox Driver &rarr;</a></p>#}
+{#                <br />#}
+{#                <p class="fs06">#}
+{#                    (1) Durée moyenne généralement constatée due à la limite de stockage de la carte conducteur#}
+{#                </p>#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
 
 
 

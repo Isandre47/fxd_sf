@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div id="container-main">
+        <div class="centralizer">
+            <div class="main">
+                <p class="breadcrumb"><a href="{{ path('home') }}">Accueil</a> > <a href="{{ path('help_index') }}">Assistance</a> > FAQ</p>
+                <h1>Foire aux questions</h1>
+                <p>Retrouvez ci-dessous des réponses aux questions fréquemment posées par la communauté Fox Driver :</p>
+                <h2 id='q1'>Avec quel type de smartphone ou tablette l'application Fox Driver est-elle compatible ? </h2>
+                <p>L'application Fox Driver fonctionne sur la plupart des smartphones et tablettes fonctionnant sous Android. Les appareils iOS ne sont pour le moment pas pris en compte. Le lecteur Bluetooth est compatible avec tous les smartphones possédant cette caractéristique. Pour le lecteur USB, votre smartphone doit être compatible avec le micro-USB type C OTG.</p>
+                <!-- <h2 id='q2'>Je possède déjà un lecteur de carte conducteur, puis-je l'utiliser avec Fox Driver ?</h2>
+                <p>Si votre lecteur de carte peut être branché sur votre smartphone ou votre tablette et qu'il est reconnu, alors vous pourrez certainement l'utiliser pour Fox Driver. Toutefois, votre lecteur n'étant pas vendu par Fox Driver, nous ne pouvons garantir son fonctionnement.</p> -->
+                <h2 id='q7'>Dans l'application, au moment de valider mon email, il ne se passe rien. Comment régler ce souci ?</h2>
+                <p>Il se peut que votre version Android nécessite une autorisation pour faire fonctionner l'application. Pour se faire, allez dans "Paramètres" > "Applications" > "Fox Driver" > "Autorisations", puis autorisez Fox Driver à stocker des informations. Relancez l'application. La saisie de votre email fonctionne à présent.</p>
+                <h2 id='q3'>L'application fonctionne-t-elle sans Internet ? </h2>
+                <p>Non, il est nécessaire d’être connecté à internet pour utiliser l’application.</p>
+                <h2 id='q4'>Le téléchargement des informations vide-t-il la carte conducteur ?</h2>
+                <p>Fox Driver n'altère en rien les données présentes sur la carte. Tout se fait de façon à ne laisser aucune trace de la lecture des données.</p>
+                <h2 id='q5'>Puis-je récupérer mes temps de conduite qui ont plus d'un an ? </h2>
+                <p>En moyenne, et ce pour des raisons indépendantes de notre volonté, les données stockées remontent à 1 an en arrière. Passé ce délai vous n'aurez plus accès à vos données car ces dernières sont effacées au fur et à mesure par le chronotachygraphe. C'est pour cela que Fox Driver propose une sauvegarde de vos données sans limite de temps.</p>
+                <h2 id='q6'>Quelle est la valeur légale des informations téléchargées ? </h2>
+                <p>Les informations téléchargées sont données à titre informatif et vous permettent de constater d'éventuels écarts. Lors d'un conflit menant au tribunal, un expert sera mandaté pour officialiser les données issues de votre carte conducteur.</p>
+                <h2>Vous ne trouvez pas de réponse à votre question ?</h2>
+                <p>Dialoguez gratuitement et en direct avec l'équipe Fox Driver :</p>
+                <p class='tac'><a href="{{ path('help_chat') }}" class="button">Démarrer une conversation</a></p>
+                <br />
+                <p class='fs08 tac'>Du lundi au vrendredi de 9h00 à 12h30 et de 14h à 17h30</p><br />
+            </div>
+        </div>
+    </div>
+{% endblock %}
+

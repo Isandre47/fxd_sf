@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div id="container-main">
+        <div class="centralizer">
+            <div class="main">
+
+                <p class="breadcrumb"><a href="{{ path('home')}}">Accueil</a> > Frais de déplacement</p>
+
+                <h1>Frais de déplacement</h1>
+
+
+                <p class="tac"><img src="{{ asset('img/foxdriver-frais-depalcement-application.jpg') }}" alt="Fox Driver : Gérez vos frais de déplacement" /></p>
+                <p>Grâce à l'option Frais de déplacement vous gérez vos frais de route et vos frais divers, au travers d'une interface simple et intuitive. Tous vos frais sont sauvegardés sur un serveur sécurisé pour vous permettre de les retrouver depuis n'importe quel appareil.</p>
+                <table class="w100 tablebuy">
+                    <tr>
+                        <th  class="bg-second w50 w50_m">
+                            <p class="tac">Client Fox Driver</p>
+                        </th>
+                        <th  class="bg-second">
+                            <p class="tac">
+                                Non client
+                            </p>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p class="tac"><img src="{{ asset('img/ico-ok.png') }}" alt="Inclu" />Gestion des frais<br /><span class="fs08">incluse dans votre abonnement Premium</span></p>
+                        </td>
+                        <td>
+                            <p class="tac">
+
+                                Application Gestion des frais 2,99 €<br /><span class="fs08">valable à vie</span><br />
+                                <a href='{{ url_playstore_cost }}' target='_blank'><img src="{{ asset('img/but-googleplay.png') }}" alt="" title="" /></a>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+

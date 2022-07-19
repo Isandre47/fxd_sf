@@ -1,13 +1,11 @@
 <footer id="container-footer">
     <div class="centralizer">
         <div style="float:left;width:100%" id="footer">
-
             <p class="tac show_mobile">
-                <a href="<?php echo $urlHelp[$idLang] ?>" class="link2"><img src="{{ asset('img/ico-contact.png') }}" alt="Assistance FoxDriver" title="Besoin d'aide ?"/> Assistance</a>
+                <a href="{{  path('help_index') }}" class="link2"><img src="{{ asset('img/ico-contact.png') }}" alt="Assistance FoxDriver" title="Besoin d'aide ?"/> Assistance</a>
                 <a href="<?php echo $urlAccount[$idLang] ?>"  class="link2" ><img src="{{ asset('img/ico-account.png') }}" alt="Mon compte FoxDriver" title="Connectez-vous" /> Mon compte</a>
                 <?php if(isConnected()) { ?> <a href='<?php echo $urlLogout[$idLang] ?>'>  <img src="{{ asset('img/ico-logout.png') }}" alt="x" title="Se déconnecter de mon compte" /></a><?php } ?>
-                <a href="<?php echo $urlFacebook ?>"  target="_blank" class="link2" ><img src="{{ asset('img/ico-facebook.png') }}" alt="Facebook FoxDriver" title="Rejoins la communauté futée" /> Rejoignez-nous !</a>
-
+                <a href="{{ url_facebook }}"  target="_blank" class="link2" ><img src="{{ asset('img/ico-facebook.png') }}" alt="Facebook FoxDriver" title="Rejoins la communauté futée" /> Rejoignez-nous !</a>
             </p>
             <br />
             <p class="tac">

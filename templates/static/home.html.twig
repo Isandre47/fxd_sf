@@ -1,6 +1,7 @@
 {% extends 'base.html.twig' %}
 
-{% block center %}
+{% block body %}
+    {% include 'static/promo.html.twig' %}
     <div id="container-main" class="bgroad">
         {#    <?php /* if(!$isLowDef) {?>#}
         {#    <video autoplay loop poster="" id="bgvid">#}
@@ -32,4 +33,6 @@
             </div>
         </div>
     </div>
+{% include 'static/rate.html.twig' %}
+{% include 'static/asset.html.twig' %}
 {% endblock %}

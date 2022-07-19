@@ -1,0 +1,189 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div id="container-main">
+        <div class="centralizer">
+            <div class="main">
+
+                <p class="breadcrumb"><a href="{{ path('home')}}">Accueil</a> > Application smartphone et tablette</p>
+
+                <h1>Contrôlez vos heures d' activités sur smartphone et tablette</h1>
+                <iframe width="560" height="315" class="ml20p" src="https://www.youtube.com/embed/tWYmSydEsyw?showinfo=0" frameborder="0" allowfullscreen></iframe>
+                <br /><br />
+                <p class="warning">Pour utiliser l'application vous devez auparavant avoir acheté le lecteur de carte conducteur Fox Driver. <a href="<?php echo $urlBuy[$idLang] ?>">&rarr; Obtenir Fox Driver</a></p><br />
+                <div class='fulldiv screenshot'>
+
+                    <h2>Télécharger et installer l'application</h2>
+                    <p>L'application Fox Driver est disponible sur le Play Store de votre smartphone ou de votre tablette Android. Vous pouvez la télécharger et l'installer en cliquant ci-dessous :</p>
+                    <p class="tac">
+                        <a href='<?php echo $urlPlaystore ?>' target='_blank'><img src="{{ asset('img/but-googleplay.png') }}" alt="" title="" /></a>
+                    </p>
+                    <p class='fs08 tac'><img src='{{ asset('img/ico-info.png') }}' alt='Fox Driver vous informe' /> Pour des raisons indépendantes de notre volonté, il se peut que votre appareil ne soit pas compatible avec Fox Driver.<br />N'hésitez pas à nous <a href="<?php $urlHelpChat ?>">contacter</a> pour en en savoir plus.</p>
+                </div>
+
+                <div class='fulldiv screenshot'>
+                    <div class='left content'>
+                        <h2>
+                            Connexion
+                        </h2>
+                        <p>
+                            Lors du lancement de l’application, celle-ci vous demande de vous connecter à votre
+                            compte utilisateur. L’adresse mail saisie doit correspondre à l’adresse mail utilisée
+                            lors de votre achat.
+                        </p>
+                    </div>
+                    <div class='right '>
+                        <p class="tac">
+                            <img src="{{ asset('img/screenshot/connexion.png') }}"
+                                 height="415"
+                                 alt="Premier lancement Application Fox Driver"
+                                 title="Premier lancement Application Fox Driver"
+                                 class="bg-smart"
+                            />
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class='fulldiv screenshot'>
+                    <div class='left'>
+                        <p class="tac">
+                            <img src="{{ asset('img/screenshot/lancement.png') }}"
+                                 height="415"
+                                 alt="Accueil Application Fox Driver"
+                                 title="Accueil Application Fox Driver"
+                                 class="bg-smart"/>
+                        </p>
+                    </div>
+                    <div class='right content'>
+                        <h2>
+                            Premier lancement
+                        </h2>
+                        <p>
+                            Lors de son premier lancement, l’application vous demande de sélectionner le type de
+                            lecteur en votre possession. Pour le lecteur Bluetooth sélectionnez « Bluetooth »,
+                            sinon conservez le choix « USB ». Cliquez sur valider pour confirmer votre choix.
+                        </p>
+                    </div>
+                </div>
+
+                <div class='fulldiv screenshot'>
+                    <div class='left content'>
+                        <h2>
+                            Accueil
+                        </h2>
+                        <p>
+                            L’écran d’accueil vous permet de télécharger vos données issues de la carte conducteur
+                            ou bien de visualiser vos données (temps de conduites et infractions). Depuis l’accueil
+                            vous pouvez visualiser les détails de votre compte, transmettre un fichier par mail
+                            (premium) ou paramétrer vos notes de frais (premium).
+                        </p>
+                    </div>
+                    <div class='right '>
+                        <p class="tac">
+                            <img src="{{ asset('img/screenshot/home.png') }}"
+                                 alt="Télécharger la carte conducteur"
+                                 title="Télécharger la carte conducteur"
+                                 class="bg-smart"/>
+                        </p>
+                    </div>
+                </div>
+
+                <div class='fulldiv screenshot'>
+                    <div class='left'>
+                        <p class="tac">
+                            <img src="{{ asset('img/screenshot/send.png') }}"
+                                 alt="Visualiser les données de conduite"
+                                 title="Visualiser les données de conduite"
+                                 class="bg-smart"/>
+                        </p>
+                    </div>
+                    <div class='right content'>
+                        <h2>
+                            Télécharger vos données
+                        </h2>
+                        <p>
+                            Télécharger vos données issues de la carte conducteur en un clic. Branchez ou connectez
+                            votre lecteur de carte avec votre carte insérée, puis cliquez sur
+                            « Télécharger la carte conducteur ». Le téléchargement peut durer quelques secondes.
+                        </p>
+                        <p>
+                            En cas d’erreur, un message vous indiquera : « Pas de lecteur détecté ». Dans ce cas,
+                            nous vous invitons à vérifier le branchement de votre lecteur USB, et la configuration
+                            de votre lecteur Bluetooth. Par la même occasion, pensez à vérifier que le choix du type
+                            de lecteur est correct.
+                        </p>
+                    </div>
+                </div>
+
+                <div class='fulldiv screenshot'>
+                    <div class='left content'>
+                        <h2>
+                            Visualiser vos données de conduites
+                        </h2>
+                        <p>
+                            Avec Fox Driver, vous pouvez visualiser vos données de conduite. Pour ce faire,
+                            cliquez sur « Visualisez les données ». Un menu vous invite à sélectionner le fichier
+                            que vous souhaitez consulter. Par défaut, seul le dernier fichier télécharger précédemment
+                            vous est accessible. Pour accéder à l’ensemble des fichiers, il est nécessaire de
+                            disposer d’un compte premium.
+                        </p>
+                        <p>
+                            Les temps sont alors affichés en détails avec un récapitulatif simple et lisible en dessous.
+                            Complet, Fox Driver affiche vos temps de conduite, de travail, de disponibilité et
+                            de repos, mais aussi vos heures supplémentaires et vos heures de nuit.
+                        </p>
+                    </div>
+                    <div class='right '>
+                        <p class="tac">
+                            <img src="{{ asset('img/screenshot/activity.png') }}"
+                                 alt="Paramétrer ses heures supplémentaires et de nuit"
+                                 title="Paramétrer ses heures supplémentaires et de nuit" class="bg-smart"/>
+                        </P>
+                    </div>
+                </div>
+
+                <div class='fulldiv screenshot'>
+                    <div class='left '>
+                        <p class="tac">
+                            <img src="{{ asset('img/screenshot/mail.png') }}"
+                                 alt="Visualiser les infractions"
+                                 title="Visualiser les infractions"
+                                 class="bg-smart"/>
+                        </p>
+                    </div>
+                    <div class='right content'>
+                        <h2>
+                            Envoyer vos données par mail (premium)
+                        </h2>
+                        <p>
+                            Avec Fox Driver vous pouvez transmettre par mail votre fichier de données à un tiers
+                            (votre employeur par exemple). Ce fichier est de type C1B. De fait, vos fichiers sont
+                            lisibles uniquement par le biais d’un logiciel particulier.
+                        </p>
+                    </div>
+                </div>
+
+                <div class='fulldiv screenshot'  id='save'>
+                    <div class='left content'>
+                        <h2>
+                            Gérer vos frais de déplacement (premium)
+                        </h2>
+                        <p>
+                            Avec Fox Driver vous gérez vos frais de déplacement facilement. Vous obtenez ainsi
+                            un aperçu mensuel des frais remboursables par l'employeur.
+                        </p>
+                    </div>
+                    <div class='right '>
+                        <p class="tac">
+                            <img src="{{ asset('img/screenshot/frais.png') }}"
+                                 alt="Sauvegarder vos données conducteur"
+                                 title="Sauvegarder vos données conducteur"
+                                 class="bg-smart"/>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

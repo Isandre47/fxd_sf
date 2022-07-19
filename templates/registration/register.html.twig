@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Register{% endblock %}
+
+{% block body %}
+    {{ include('static/promo.html.twig') }}
+
+    <div id="container-main">
+        <div class="centralizer">
+            <div class="main">
+                {% for flash_error in app.flashes('verify_email_error') %}
+                    <div class="alert alert-danger" role="alert">{{ flash_error }}</div>
+                {% endfor %}
+
+                <h1>S'enregistrer</h1>
+
+                {{ form_start(registrationForm) }}
+                {{ form_row(registrationForm.email) }}
+                {{ form_row(registrationForm.plainPassword, {
+                    label: 'Mot de passe'
+                }) }}
+                <div id="myModal" class="modal" style="display:none;">
+                    {{ include('registration/_cgv.html.twig') }}
+                </div>
+                <p>
+                    En créant votre compte, vous reconnaissez avoir lu et approuvé nos
+                    <a href="#myModal" rel="modal:open">Conditions Générales de Ventes</a>.
+                </p>
+
+                <button type="submit" class="button">S'enregistrer</button>
+                {{ form_end(registrationForm) }}
+            </div>
+        </div>
+    </div>
+{% endblock %}

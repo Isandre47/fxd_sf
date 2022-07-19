@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div id="container-main">
+        <div class="centralizer">
+            <div class="main">
+                <p class="breadcrumb"><a href="{{ path('home') }}">Accueil</a> > <a href="{{ path('help_index') }}">Assistance</a> > Chat</p>
+
+                <h1>Dialoguer avec l'équipe Fox Driver</h1>
+                <p>L'équipe Fox Driver est à votre disposition du lundi au vendredi de 9h30 à 12h30 et de 14h à 17h30. En dehors de ces périodes et pendant les jours fériés nous ne pouvons traiter en direct vos demandes, mais vous pouvez toujours nous laisser un message :) Merci pour votre compréhension.</p>
+                <p>En cas d'absence d'un de nos conseillers, vous pouvez nous envoyer un email à <a href="mailto:florence.bouvier@ereca-france.com">contact@fox-driver.com</a></p>
+                <!-- Place this tag where you want the Live Helper Plugin to render. -->
+                <div id="lhc_status_container_page" ></div>
+
+                <!-- Place this tag where you want the Live Helper Plugin to render. -->
+                <div id="lhc_status_container_page" ></div>
+
+                <!-- Place this tag after the Live Helper Plugin tag. -->
+                <script type="text/javascript">
+                  var LHCChatOptionsPage = {};
+                  LHCChatOptionsPage.opt = {};
+                  (function() {
+                    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                    po.src = '//www.fox-driver.com/app/lhc_web/index.php/fre/chat/getstatusembed/(leaveamessage)/true/(department)/1';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+                  })();
+                </script>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
