@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div id="container-main">
+    <div class="centralizer w400px">
+        <div class="main boxing">
+
+            <h1>Expédition de votre Fox Driver</h1>
+
+            <p class="fs08">
+                Choissisez une adresse existante en cliquant sur &laquo; Envoyer à cette adresse &raquo; ou
+                bien ajoutez en une nouvelle.
+            </p>
+            <br/>
+            <p>
+                <a href="{{ path('app_address_new') }}">Ajouter une adresse</a>
+            </p>
+            <div class="fulldiv">
+                {% for address in addresses %}
+                    <div class="fl ml05p">
+                        <p>
+                            <strong>{{ address.user.surname }}(<span class='first'>Facturation</span>)</strong>
+                        </p>
+                        <p class="fs08">
+                            {{ address.company is not null ? address.company : '' }}
+                            {{ address.street }}<br />
+                            {{ address.zip }} {{ address.city }}, {{ address.country }}<br />
+                            Tél.  {{ address.phoneNumber is not null ? address.phoneNumber : '' }}<br /><br />
+                            <a href="<?php echo $urlOrder[$idLang] ?>?s=<?php echo $ad->getId() ?>" class="button">Envoyez
+                                à cette adresse</a>
+                            <br/>
+                            <br/>
+                            <a href="<?php echo $urlAccountAddressUpdate[$idLang] ?>?id=<?php echo $ad->getId(); ?>">Modifier</a><br/>
+                        </p>
+                        <br /> <br />
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <?php require_once("../generic/bottom.php"); ?>
+{% endblock %}

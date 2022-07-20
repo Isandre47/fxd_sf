@@ -32,6 +32,12 @@ class RegistrationController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            // D'après la version originale de l'ancien site
+            $salt1 = $this->getParameter('app.salt1');
+            $salt2 = $this->getParameter('app.salt2');
+            $t = date('Y-m-d H:i:s').$user->getEmail();
+            $user->setRoles(['ROLE_USER']);
+            $user->setAuth(sha1($salt1.$t.$salt2));
             // encode the plain password
             $user->setPassword(
                 $userPasswordHasher->hashPassword(

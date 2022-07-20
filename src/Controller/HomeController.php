@@ -59,4 +59,14 @@ class HomeController extends AbstractController
             'url_playstore_cost' => $this->getParameter('app.playstore_url'),
         ]);
     }
+
+    #[Route('/buy', name: 'buy')]
+    public function buy(): Response
+    {
+        return $this->render('static/buy.html.twig', [
+            'page_title' => 'home',
+            'user' => 'toto',
+            'nav_type' => 'std',
+        ]);
+    }
 }

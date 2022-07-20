@@ -7,6 +7,8 @@ parameters:
     app.playstore_cost_url: '%env(PLAYSTORE_COSTS_URL)%'
     app.playstore_url: '%env(PLAYSTORE_URL)%'
     app.facebook_url: '%env(FACEBOOK_URL)%'
+    app.salt1: 'FD%'
+    app.salt2: '%69120'
 
 services:
     # default configuration for services in *this* file

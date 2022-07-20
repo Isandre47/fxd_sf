@@ -1,0 +1,103 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div id="container-main">
+    <div class="centralizer">
+        <div class="main">
+            <p class="breadcrumb">
+                <a href="{{ path('home') }}">Accueil</a> > Bonjour {{ app.user.surname }}
+            </p>
+            <h1>Votre compte</h1>
+            <hr>
+            <p class='tac'>Donnez une note à Fox Driver</p>
+            <hr>
+            <br>
+            <br>
+            <h2>Vos Paramètres</h2>
+            <table class="w100 tableaccount" cellspacing="0" cellpadding="0">
+                <tr>
+                    <td>
+                        <h3>Paramètres du compte</h3>
+                        <p>
+                            <a href="{{ path('app_user_edit', {'id': app.user.id}) }}">Nom, adresse e-mail et mot de
+                                passe</a>
+                            <br>
+                            <a href="{{ path('app_address_index') }}">Modifier mes adresses</a>
+                            <br>
+                            <a href="{{ path('app_address_new') }}">Ajouter une adresse</a>
+                        </p>
+                    </td>
+                    <td class='w50'>
+                        <h3>Mon abonnement</h3>
+                        <p>
+
+                            <a href='<?php echo $urlPlaystore ?>' target='_blank'>
+                                <img src="{{ asset('img/but-googleplay.png') }}" alt="" title="" style="width:120px"/>
+                            </a>
+                            <br>
+                            <img src="{{ asset('img/ico-ok.png') }}" alt=""/>
+                            <img src="{{ asset('img/ico-not.png') }}" alt=""/>
+                             Accès à l'application
+                            <br>
+                            <br>
+                            <strong>Options premium <span class='fs08'>(valable jusqu'au )</span>
+                                :</strong>
+                            <br>
+
+                            <img src="{{ asset('img/ico-ok.png') }}" alt=""/>
+                            <a href='<?php echo $urlPlatformeHome[$idLang] ?>'>Accéder à la plateforme Internet</a>
+                            <br>
+                            <img src="{{ asset('img/ico-ok.png') }}" alt=""/>   Frais de déplacements</a>
+                            <br>
+                            <img src="{{ asset('img/ico-ok.png') }}" alt=""/>  Sauvegarde des données
+                            <br>
+                            <img src="{{ asset('img/ico-not.png') }}" alt=""/>  Sauvegarde des données
+                            <br>
+                            <img src="{{ asset('img/ico-not.png') }}" alt=""/>   Accès à la plateforme Internet
+                            <br>
+                            <img src="{{ asset('img/ico-not.png') }}" alt=""/>   Frais de déplacement
+                            <br>
+                            <br>
+                            <a href="<?php echo $urlOrderRenouveler[$idLang] ?>" class="button">&rarr; Renouveler mon abonnement Premium</a>
+                        </p>
+{#                        <script>#}
+{#                          $(function () {#}
+{#                            $("#tooltipinfoactivate").tooltip({#}
+{#                              show: null,#}
+{#                              position: {#}
+{#                                my: "left top",#}
+{#                                at: "left bottom"#}
+{#                              },#}
+{#                              open: function (event, ui) {#}
+{#                                ui.tooltip.animate({top: ui.tooltip.position().top + 10}, "fast");#}
+{#                              },#}
+{#                              content: function () {#}
+{#                                var element = $(this);#}
+{#                                var text = element.text();#}
+{#                                return "<span class='fs08'>Le numéro de série de votre lecteur est situé au dos de votre <strong>lecteur ouvert</strong><br />(S/N: XXXXX-XXXXXX)</span>";#}
+{#                              }#}
+{#                            });#}
+{#                          });#}
+{#                        </script>#}
+                        <p class="tac">
+                            Aucun abonnement en cours...
+                            <br>
+                            <a href="<?php echo $urlBuy[$idLang] ?>">Acheter Fox Driver</a>
+                        </p>
+                        <p class="fancy">
+                            <span>ou</span>
+                        </p>
+                        <p class='tac'>
+                            <a href='<?php echo $urlAccountActivate[$idLang] ?>'>Activer via mon lecteur</a>
+                            <img src="{{ asset('img/ico-info.png') }}" alt="i:" id="tooltipinfoactivate" title=""/>
+                        </p>
+                        <?php } ?>
+                    </td>
+                </tr>
+            </table>
+            <br/>
+            <h2 id='ord'>Commandes</h2>
+        </div>
+    </div>
+</div>
+{% endblock %}

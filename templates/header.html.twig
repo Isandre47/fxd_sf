@@ -8,12 +8,12 @@
             <div id="logo" class="pl20">
 
                 <div class="fl hide_mobile">
-                    <a href="<?php echo $rooturl; ?>" ><img src="{{ asset('img/logo-foxdrive-lecture-carte-conducteur.png') }}" alt="<?php echo $meta_title; ?>" title="<?php echo $meta_title; ?>" class='fl' /></a>
+                    <a href="{{ path('home')}}" ><img src="{{ asset('img/logo-foxdrive-lecture-carte-conducteur.png') }}" alt="<?php echo $meta_title; ?>" title="<?php echo $meta_title; ?>" class='fl' /></a>
                 </div>
                 <div class="fl ml5 mt05 hide_mobile">
 
                     <p class='mb0 fs18 lh1 ml5'>
-                        <a href="<?php echo $rooturl; ?>" class="link2">
+                        <a href="{{ path('home')}}" class="link2">
                             <span class="mb0">Fox DRIVER</span><br />
                             <span style="" class="first fs05">Les conducteurs rusés !</span>
                         </a>
@@ -25,7 +25,7 @@
 
                 </div>
                 <p class="tac show_mobile">
-                    <a href="<?php echo $rooturl; ?>" ><img src="{{ asset('img/logo-foxdrive-lecture-carte-conducteur.png') }}" alt="<?php echo $meta_title; ?>" title="<?php echo $meta_title; ?>"/></a>
+                    <a href="{{ path('home')}}" ><img src="{{ asset('img/logo-foxdrive-lecture-carte-conducteur.png') }}" alt="<?php echo $meta_title; ?>" title="<?php echo $meta_title; ?>"/></a>
                 </p>
                 <p onClick="$('#menu').slideToggle('fast','swing')" class="tac show_mobile mb0_m">
                     <img src="{{ asset('img/ico-menu.png') }}" alt=" - " /> Menu
@@ -35,9 +35,11 @@
                         <img src="{{ asset('img/ico-france.png') }}" alt="Application lecture carte conducteur Française Fox Driver" title="Fox Driver France"/> Application conçue en France&nbsp;
                         <a href="{{ path('help_index') }}" class="link2"><img src="{{ asset('img/ico-contact.png') }}" alt="Assistance FoxDriver" title="Besoin d'aide ?"/> Assistance</a>
                         {% if is_granted('IS_AUTHENTICATED') %}
-                        <a href="{{ is_granted('IS_AUTHENTICATED')  ? '': path('app_register') }}"  class="link2" ><img src="{{ asset('img/ico-logout.png') }}" alt="Mon compte FoxDriver" title="Connectez-vous" /> Se déconnecter</a>
+                        <a href="{{ path('app_logout') }}"  class="link2" ><img src="{{ asset('img/ico-logout.png') }}" alt="Mon compte FoxDriver" title="Connectez-vous" /> Se déconnecter</a>
+                            <span> / </span>
+                        <a href="{{ path('home_account') }}"  class="link2" > Mon compte</a>
                         {% else %}
-                        <a href="{{ is_granted('IS_AUTHENTICATED')  ? '': path('app_login') }}"  class="link2" ><img src="{{ asset('img/ico-account.png') }}" alt="Mon compte FoxDriver" title="Connectez-vous" /> Mon compte</a>
+                        <a href="{{ path('app_login') }}"  class="link2" ><img src="{{ asset('img/ico-account.png') }}" alt="Mon compte FoxDriver" title="Connectez-vous" /> Mon compte</a>
                         {% endif %}
 {#                        <?php if(isConnected()) { ?> #}
 {#                        <a href='<?php echo $urlLogout[$idLang] ?>'>  <img src="{{ asset('img/ico-logout.png') }}" alt="x" title="Se déconnecter de mon compte" /></a>#}
@@ -60,7 +62,7 @@
                         <li><a href="{{ path('platform') }}"  class="underline">Plateforme</a></li>
                         <li><a href="{{ path('costs') }}" class="underline" >Frais</a></li>
                         <li>
-                            <a href="<?php echo $urlBuy[$idLang] ?>" class="button mb0 mt0
+                            <a href="{{ path('buy') }}" class="button mb0 mt0
 {#                            <?php if($nav == "home") echo "bordering" ?>#}
                             " >Acheter</a>
                         </li>

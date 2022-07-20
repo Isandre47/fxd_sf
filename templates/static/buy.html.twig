@@ -1,0 +1,291 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div id="container-main">
+    <div class="centralizer">
+        <div class="main">
+
+            <p class="breadcrumb"><a href="{{ path('home')}}">Accueil</a> > Acheter Fox Driver</p>
+
+            <h1>Acheter Fox Driver</h1>
+
+            <p><strong>L'offre Fox Driver est simple et transparente.</strong><br />
+                Vous payez une seule et unique fois pour utiliser le lecteur de carte conducteur et l'application pour contrôler vos heures d'activités.<br />
+
+                <?php /*  <span class="fs08">L'option de sauvegarde, d'accès à la plateforme Internet et d'envoi manuel des données est offerte les 6 premiers mois. Sans engagement, elle sera  reconductible uniquement  avec votre accord.</span> */ ?> </p>
+
+            <table class="w100 tablebuy">
+                <tr>
+{#                    <?php if($isLowDef) : ?>#}
+
+
+{#                    <th colspan="2" class="bg-second">#}
+{#                        <p class="tac">Fox Driver</p>#}
+{#                        <p class="tac fs08">Sans abonnement, <strong>valable à vie</strong></p>#}
+{##}
+{#                    </th>#}
+
+{#                    <?php else : ?>#}
+                    <th style="width:40%">
+
+                    </th>
+                    <th  class="bg-second">
+                        <p class="tac">Lecteur USB <a href="#myModalUsb" rel="modal:open"><img src="{{ asset('img/ico-info.png') }}" alt="Inclu" /></a></p>
+                    </th>
+                    <th  class="bg-second">
+                        <p class="tac">Lecteur Bluetooth  <a href="#myModalBluetooth" rel="modal:open"><img src="{{ asset('img/ico-info.png') }}" alt="Inclu" /></a></p>
+                    </th>
+{#                    <?php endif; ?>#}
+
+                </tr>
+                <tr>
+{#                    <?php if($isLowDef) : ?>#}
+
+{#                    <td colspan="2">#}
+{#                        <p class="tac">#}
+{#                            <img src="<?php echo $ressurl ?>img/lecteur-carte-usb-c.png" alt="Lecteur carte conducteur"/><br />#}
+{#                            <?php if(isset($licenseActive) && $licenseActive == true){  var_dump($price); ?>#}
+{#                            <strong class="fs16">35<sup class="second fs05">,00</sup>€ </strong>#}
+{#                            <?php } else { ?>#}
+{#                            <strong class="fs16">74<sup class="second fs05">,90</sup>€ </strong>#}
+{#                            <?php } ?>#}
+{#                            &nbsp;&nbsp;#}
+{#                            <a href="<?php echo $urlOrderStart[$idLang] ?>" class="button ">Acheter</a>#}
+{#                        </p>#}
+{#                    </td>#}
+{#                    <td>#}
+{#                        <p class="tac">#}
+{#                            <img src="<?php echo $ressurl ?>img/lecteur-carte-bluetooth.png"alt="Lecteur carte conducteur" /><br />#}
+{#                            <?php if(isset($licenseActive) && $licenseActive == true) { ?>#}
+{#                            <strong class="fs16">64<sup class="second fs05">,00</sup>€ </strong>#}
+{#                            <?php } else { ?>#}
+{#                            <strong class="fs16">103<sup class="second fs05">,90</sup>€ </strong>#}
+{#                            <?php } ?>#}
+{#                            &nbsp;&nbsp;#}
+{#                            <a href="<?php echo $urlOrderStart[$idLang] ?>?lc=LC002 " class="button bigger">Acheter</a><br />#}
+
+{#                        </p>#}
+{#                    </td>#}
+{#                    <?php else : ?>#}
+                    <td><p class="tar">Sans abonnement<br /><strong>valable à vie</strong> : </p></td>
+                    <td>
+                        <p class="tac">
+                            <img src="{{ asset('img/lecteur-carte-usb-c.png') }}" alt="Lecteur carte conducteur"/><br />
+{#                            <?php if(isset($licenseActive) && $licenseActive == true){ ?>#}
+{#                            <strong class="fs16">35<sup class="second fs05">,00</sup>€ </strong>#}
+{#                            <?php } else { ?>#}
+                            <strong class="fs16">74<sup class="second fs05">,90</sup>€ </strong>
+{#                            <?php } ?>#}
+                            {% if is_granted('IS_AUTHENTICATED') %}
+                            <a href="{{ path('ship_select') }}" class="button bigger">Acheter</a>
+{#                            <a href="<?php echo $urlOrderStart[$idLang] ?>?lc=LC003" class="button bigger">Acheter</a>#}
+                        {% else %}
+                            <a href="{{ path('app_login') }}" class="button bigger">Acheter</a><br />
+                            {% endif %}
+                        </p>
+                    </td>
+                    <td>
+                        <p class="tac">
+                            <img src="{{ asset('img/lecteur-carte-bluetooth.png') }}" alt="Lecteur carte conducteur"/><br />
+{#                            <?php if(isset($licenseActive) && $licenseActive == true) { ?>#}
+{#                            <strong class="fs16">64<sup class="second fs05">,00</sup>€ </strong>#}
+{#                            <?php } else { ?>#}
+                            <strong class="fs16">103<sup class="second fs05">,90</sup>€ </strong>
+{#                            <?php } ?>#}
+                            {% if is_granted('IS_AUTHENTICATED') %}
+                            <a href="{{ path('ship_select') }}" class="button bigger">Acheter</a><br />
+{#                            <a href="<?php echo $urlOrderStart[$idLang] ?>?lc=LC002" class="button bigger">Acheter</a><br />#}
+                            {% else %}
+                            <a href="{{ path('app_login') }}" class="button bigger">Acheter</a><br />
+                            {% endif %}
+                        </p>
+
+                    </td>
+
+                    <?php endif; ?>
+
+                </tr>
+
+
+                <tr>
+                    <td class="bg-light">
+                        <p>
+                            <strong>Accès à l'application Android Fox Driver <sup>*</sup></strong><br />
+                            Bénéficiez des principales fonctionnalités de l'application de lecture de carte conducteur Fox Driver.
+                            <a href="{{ path('application') }}" class="fs08">[Voir le détail]</a>
+                        </p>
+                    </td>
+                    <td class="bg-light">
+                        <p  class="tac fs08">
+                            <img src="{{ asset('img/ico-ok.png') }}" alt="Inclus" />
+                        </p>
+                    </td>
+                    <td class="bg-light">
+                        <p  class="tac">
+                            <img src="{{ asset('img/ico-ok.png') }}" alt="Inclus" />
+                        </p>
+                    </td>
+
+                </tr>
+
+                <tr>
+                    <td>
+                        <p>
+                            <strong>Compatible Mobile et Tablette Android</strong><br />
+                            Accédez à tout moment à vos données conducteurs  sur votre mobile ou tablette via l'application Android.
+                        </p>
+                    </td>
+                    <td>
+                        <p  class="tac"><img src="{{ asset('img/ico-ok.png') }}" alt="Inclus" /></p>
+                    </td>
+                    <td>
+                        <p  class="tac"><img src="{{ asset('img/ico-ok.png') }}" alt="Inclus" /></p>
+                    </td>
+
+                </tr>
+                <tr>
+
+
+
+
+                    <td class="bg-light">
+                        <p>
+                            <strong>Lecteur de carte</strong><br />
+                            Récupérez les données issues de votre carte conducteur.
+                        </p>
+                        <p class="fs08">
+
+                        </p>
+                    </td>
+                    <td class="bg-light" style='width:30%'>
+                        <p class="tac fs08">
+                            <strong>Compatible uniquement avec des smartphones
+                                équipés d'un port micro-usb type C.</strong>
+                        </p>
+                    </td>
+                    <td class="bg-light">
+                        <p  class="tac fs08"><strong>
+                                Compatible toute marque avec Android</strong><br />
+                            <img src="{{ asset('img/ico-ok.png') }}" alt="Inclus" />
+                        </p>
+                    </td>
+
+                </tr>
+
+                <tr>
+                    <td class="">
+
+                        <p>
+                            <strong>Mises à jour en temps réel</strong><br />
+                            Bénéficiez de l'ensemble des mises à jours de votre application de lecture de carte conducteur Fox Driver.
+                        </p>
+                    </td>
+                    <td class="" >
+                        <p  class="tac"><img src="{{ asset('img/ico-ok.png') }}" alt="Inclus" /></p>
+                    </td>
+                    <td class="" >
+                        <p  class="tac"><img src="{{ asset('img/ico-ok.png') }}" alt="Inclus" /></p>
+                    </td>
+
+                </tr>
+            </table>
+            <h3 class="tac">Fox Driver Premium : essai gratuit (3 mois) <span class="fs08">[ <a href="<?php echo $urlOrderRenouveler[$idLang] ?>">Renouveler</a> ]</span></h3>
+            <table class="w100 tablebuy">
+                <tr>
+                    <td class="bg-light" style="width:40%">
+                        <p>
+                            <strong>Visualisation des données<br />sur Windows et MAC</strong> <sup class="first">Nouveau</sup><br />
+                            Notre plateforme internet vous permet de consulter les données sauvegardées via l'application, à partir de n'importe quel ordinateur connecté à Internet (Windows, MAC et Linux)
+                        </p><br />
+                        <p>
+                            <strong>Gestion Frais de déplacement</strong> <sup class="first">Nouveau</sup><br />
+                            Gérer vos frais de déplacement et ayez ainsi un aperçu mensuel de vos frais remboursables
+                        </p><br />
+                        <p>
+                            <strong>Sauvegarde sécurisée</strong><br />
+                            Vos données de conduite sont sauvegardées par vos soins sur un serveur sécurisé. Aucune perte de données, même au delà d'un an.
+                        </p><br />
+                        <p>
+                            <strong>Envoi à distance par email</strong><br />
+                            Envoyer vos données de conduite par email au destinataire de votre choix (Boîte d'intérim, employeur...)
+                        </p>
+                    </td>
+                    <td rowspan="2" class="bg-light">
+                        <p  class="tac"><img src="{{ asset('img/ico-ok.png') }}" alt="Inclus" /></p>
+
+                        <p class="tac fs08"><img src="<{{ asset('img/ico-info.png') }}" alt="" /> <storng>Sans engagement</storng><br />A la fin de la période des 3 mois,<br />vous êtes libre de prolonger ou non l'utilisation de ces options.<br />Aucun prélèvement automatique.<br />Prix habituel : 29,90€ <strong class="first">/ an</strong></p>
+                    </td>
+                </tr>
+
+
+            </table>
+            <p class="fs08">* Valable par conducteur, ne peut être revendu.</p>
+        </div>
+    </div>
+</div>
+
+<div id="myModalUsb" class="modla dn">
+    <p>
+        Dimensions modèle boîtier Ipod : 72.2mm (L) x 69mm (W) x 14.5mm (H)<br />
+        Dimensions modèle Bridge (Pont) : 80.0mm (L) x 71.5mm (W) x 80.0mm (H)<br />
+        Interface USB 2.0 Full Speed<br />
+        Alimentation : 5V DC régulés, Courant max. 50mA<br />
+        Température de fonctionnement de 0-50°C<br />
+        Fréquence CLK 4 MHz<br />
+        MTBF 500,000 heures<br />
+        Interface Smart card supporté : ISO-7816 Class A, B et C ( 5V, 3V, 1.8V )<br />
+        Conformité/Certifications : EN 60950/IEC 60950, EMV 2000 Level 1, PC/SC, CCID, CE, FCC, VCCI, RoHS Compliant, USB Full Speed<br />
+        Microsoft WHQL: 2000, 2003, XP, Vista, 2008, 2008 R2, 7<br />
+        OS supporté : Android<br />
+    </p>
+
+</div>
+
+<div id="myModalBluetooth" class="modal" style="display:none;" >
+    <h3>Caractéristiques techniques :</h3>
+    <p>
+        Supporte Android<br />
+        Certifié à EMV Level 1<br />
+        Supporte ISO-7816-1/2/3, Protocole T = 0 et T = 1<br />
+        Supporte ISO-7816 Cartes Classe A, B et C<br />
+        Compatible avec les normes PC/SC, CCID<br />
+        Développement de librairies tierces<br />
+        MFI<br />
+
+    </p>
+    <p>
+        Tension : 3.3V<br />
+        Coutant : <55mA<br />
+        Vitesse de transfert des données : 10753~344086bps<br />
+        Cartes à puce supportées : ISO7816 1/2/3 T0,T1,CLASSB,CLASSC,CLASSBC<br />
+        Vitesse de transfert des données sous iOS : 115200bps<br />
+        Température de fonctionnement : 0°C~50°C (32°F~122°F)<br />
+        Température de stockage : -20°C~70°C (-4°F~158°F)<br />
+        Humidité de fonctionnement : 60~90%RH non-condensing<br />
+        Humidité de stockage : 60~90%RH non-condensing<br />
+        Port : Bluetooth<br />
+        Type de cartes : Contact (smart card)<br />
+        Type de fermeture : External<br />
+        Type d'interface : Bluetooth<br />
+        Extension(s) : 1 x Smart Card<br />
+        Batterie : 890mAh Nokia ROHS<br />
+        Chargement : Micro USB<br />
+        Dimensions et poids : 64 × 85 × 13.5 mm 200 grammes<br />
+        Pont carte : 8 contact points (ISO7816 standard) 100.000 plugging and unplugging times<br />
+        OS supportés : iOS (application  Fox Driver non disponible) /Android <br />
+        Certifications : CE/FCC/MFI/RoHC(pending approval)<br />
+    </p>
+    <h3>Communication sans fil :</h3>
+    <p>
+        Protocole de communicatons : 2.4GHz frequency ISM band. IEEE 802.15.1(Bluetooth) with full security enabled<br />
+        Distance de transmission de fréquences : <0.5m<br />
+        Débit des données : 750kb/s to 1MB/s<br />
+        Encryption des données : AES-128<br />
+    </p>
+    <p>
+        Garantie : 1 an
+    </p>
+</div>
+
+    {% include 'static/rate.html.twig' %}
+{% endblock %}
