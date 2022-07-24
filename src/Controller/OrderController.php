@@ -11,7 +11,15 @@ class OrderController extends AbstractController
     #[Route('/choisir-adresse-livraison', name: 'ship_select')]
     public function shipSelect(): Response
     {
-        return $this->render('static/ship.html.twig',[
+        return $this->render('static/ship.html.twig', [
+            'addresses' => $this->getUser()->getAddresses(),
+        ]);
+    }
+
+    #[Route('/paiement', name: 'payment')]
+    public function shipOrder(): Response
+    {
+        return $this->render('static/order.html.twig', [
             'addresses' => $this->getUser()->getAddresses(),
         ]);
     }

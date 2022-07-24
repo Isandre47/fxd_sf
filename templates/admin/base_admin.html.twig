@@ -5,16 +5,12 @@
 </head>
 
 <body>
-{{ app.user is not null ? app.user.surname : 'que dalle' }}
-{% if is_granted('ROLE_ADMIN') %}
+<h1>{{ app.user.surname }} </h1>
     {% include 'header_admin.html.twig' %}
     {#    {% elseif 2 == 3 %}#}
     {#        {% include 'header_platform.html.twig' %}#}
     {#    {% elseif 2 == 4 %}#}
     {#        {% include 'header_buy.html.twig' %}#}
-{% else %}
-    {% include 'header.html.twig' %}
-{% endif %}
 {#<h1>{{ page_title }}</h1>#}
 {#Hello {{ user }}!#}
 {% block body %}{% endblock %}

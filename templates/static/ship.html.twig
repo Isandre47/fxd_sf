@@ -26,11 +26,11 @@
                             {{ address.street }}<br />
                             {{ address.zip }} {{ address.city }}, {{ address.country }}<br />
                             Tél.  {{ address.phoneNumber is not null ? address.phoneNumber : '' }}<br /><br />
-                            <a href="<?php echo $urlOrder[$idLang] ?>?s=<?php echo $ad->getId() ?>" class="button">Envoyez
+                            <a href="{{ path('payment') }}" class="button">Envoyez
                                 à cette adresse</a>
                             <br/>
                             <br/>
-                            <a href="<?php echo $urlAccountAddressUpdate[$idLang] ?>?id=<?php echo $ad->getId(); ?>">Modifier</a><br/>
+                            <a href="{{ path('app_address_edit', {'id': address.id}) }}">Modifier</a><br/>
                         </p>
                         <br /> <br />
                     </div>

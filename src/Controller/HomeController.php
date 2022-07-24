@@ -12,6 +12,12 @@ class HomeController extends AbstractController
     #[Route('/', name: 'home')]
     public function home(): Response
     {
+        var_dump('home',$this->isGranted('IS_AUTHENTICATED'));
+        if ($this->isGranted('ROLE_ADMIN')) {
+            var_dump('tototezeea');
+            return $this->redirectToRoute('admin_home');
+        }
+
         return $this->render('static/home.html.twig', [
             'page_title' => 'home',
             'user' => 'toto',
@@ -49,7 +55,7 @@ class HomeController extends AbstractController
         ]);
     }
 
-    #[Route('/costs', name: 'costs')]
+    #[Route('/frais', name: 'costs')]
     public function costs(): Response
     {
         return $this->render('static/costs.html.twig', [
@@ -60,7 +66,7 @@ class HomeController extends AbstractController
         ]);
     }
 
-    #[Route('/buy', name: 'buy')]
+    #[Route('/acheter', name: 'buy')]
     public function buy(): Response
     {
         return $this->render('static/buy.html.twig', [

@@ -10,6 +10,11 @@ security:
                 class: App\Entity\User
                 property: email
     firewalls:
+        admin:
+            pattern: ^/pages/admin_fd69120/
+            form_login:
+                login_path: admin_login
+                check_path: app_login
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
@@ -20,12 +25,11 @@ security:
                 login_path: app_login
                 check_path: app_login
                 enable_csrf: true
-                default_target_path: home_account
             logout:
                 path: app_logout
+                target: home
                 # where to redirect after logout
                 # target: app_any_route
-
             # activate different ways to authenticate
             # https://symfony.com/doc/current/security.html#the-firewall
 
@@ -35,8 +39,8 @@ security:
     # Easy way to control access for large sections of your site
     # Note: Only the *first* access control that matches will be used
     access_control:
-        # - { path: ^/admin, roles: ROLE_ADMIN }
-        # - { path: ^/profile, roles: ROLE_USER }
+#         - { path: ^/pages/admin_fd69120, roles: ROLE_ADMIN }
+#         - { path: ^/profile, roles: ROLE_USER }
 
 when@test:
     security:

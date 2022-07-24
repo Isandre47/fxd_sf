@@ -1,6 +1,4 @@
-<script src="{{ asset('js/pdf/pdfmake.min.js') }}"></script>
-<script src="{{ asset('js/pdf/vfs_fonts.js') }}"></script>
-<script src="{{ asset('js/pdf/exemple.js') }}"></script>
+
 <header>
     <div class="container-header">
 
@@ -39,7 +37,7 @@
                             <span> / </span>
                         <a href="{{ path('home_account') }}"  class="link2" > Mon compte</a>
                         {% else %}
-                        <a href="{{ path('app_login') }}"  class="link2" ><img src="{{ asset('img/ico-account.png') }}" alt="Mon compte FoxDriver" title="Connectez-vous" /> Mon compte</a>
+                            <a href="{{ path('app_login') }}"  class="link2" ><img src="{{ asset('img/ico-account.png') }}" alt="Mon compte FoxDriver" title="Connectez-vous" /> Se connecter</a>
                         {% endif %}
 {#                        <?php if(isConnected()) { ?> #}
 {#                        <a href='<?php echo $urlLogout[$idLang] ?>'>  <img src="{{ asset('img/ico-logout.png') }}" alt="x" title="Se déconnecter de mon compte" /></a>#}
