@@ -13,9 +13,25 @@
                 {% endfor %}
                 <div class="centralizer w400px">
                     <div class="main boxing">
-                        <h1>S'enregistrer</h1>
+                        <h1>Nouveau client</h1>
 
                         {{ form_start(registrationForm) }}
+                        <p>
+                            <strong>
+                                {{ form_label(registrationForm.name, 'Votre nom ?') }}
+                            </strong>
+                            <br>
+                            {{ form_widget(registrationForm.name) }}
+                            <br>
+                        </p>
+                        <p>
+                            <strong>
+                                {{ form_label(registrationForm.surname, 'Votre prénom ?') }}
+                            </strong>
+                            <br>
+                            {{ form_widget(registrationForm.surname) }}
+                            <br>
+                        </p>
                         <p>
                             <strong>
                                 {{ form_label(registrationForm.email, 'Votre adresse e-mail ?') }}
